@@ -1,0 +1,113 @@
+ #mnum {
+     font-weight: 200;
+     color: rgb(174, 154, 148);
+ }
+
+ * {
+     font-family: montserrat-bold, sans-serif;
+ }
+
+ #homemen {
+     display: flex;
+     justify-content: flex-start;
+
+     margin-top: -5px;
+     margin-left: 50px;
+
+ }
+#filter{
+    position: fixed;
+}
+ #homemen>h3>a {
+     font-size: smaller;
+     text-decoration: none;
+     color: rgb(142, 142, 142);
+
+ }
+
+ #homemen>h3 {
+     text-decoration: none;
+     font-size: small;
+     font-family: montserrat, sans-serif;
+     size: 13px;
+     color: rgba(0, 0, 0, 0.9);
+     margin-left: 50px;
+     font-style: normal;
+     font-weight: 400;
+ }
+#menclothing>:first-child{
+    margin-right: 25px;
+}
+ #menclothing {
+     display: flex;
+     font-family: montserrat-bold, sans-serif;
+     font-weight: 700;
+     size: 24px;
+     margin-left: 90px;
+     margin-top: 25px;
+     color: #2d2d2d;
+     font-size: 11px;
+ }
+
+ #menclothing>select {
+     margin-left: 850px;
+     height: 30px;
+     border: none;
+     color: rgb(150, 150, 150);
+ }
+
+ #parent>hr {
+     margin-left: 95px;
+     margin-top: -7px;
+ }
+
+ #parentmen {
+     display: flex;
+     justify-content: space-between;
+ }
+
+ #filter {
+     display: grid;
+     width: 30%;
+     height: 500px;
+     padding-left: 90px;
+ }
+
+ #filter>select {
+     border: none;
+     font-size: large;
+ }
+
+ #product {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     margin-left: 90px;
+ }
+
+ #product>div>img {
+     width: 95%;
+ }
+
+ #product>div>div {
+     display: flex;
+     gap: 10px;
+     margin-top: -20px;
+ }
+
+ #product>div>div>:last-child {
+     text-decoration: line-through;
+     color: rgb(148, 148, 148);
+ }
+
+ #product>div>h5 {
+     color: rgb(148, 148, 148);
+ }
+
+ #product>div>:nth-child(3) {
+     color: rgb(148, 148, 148);
+     font-size: small;
+ }
+
+ img:hover {
+     transform: scale(102%);
+ }
