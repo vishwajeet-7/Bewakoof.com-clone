@@ -16,12 +16,58 @@
 #title{
     
     padding: 20px, 20px, 20px, 20px;
-    color: rgb(253,216,53)
+    color: rgb(253,216,53);
+    margin-left: 8%;
 }
+
+#footer_up>div{
+    /* border: 2px solid green; */
+    width:30%px;
+
+}
+#footer_up{
+    /* border: 2px solid rgb(83, 222, 29); */
+    justify-content: space-evenly;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+}
+
+
+
+#footer_up2{
+    border: 2px solid red;
+    display: flex;   
+    margin-top: 40px;   
+}
+#footer_up2>div{
+    
+    margin-left: 100px;   
+}
+#a{
+    border: 2px solid teal;
+    color:  rgb(253,216,53);
+}
+#logo{
+    width: 100px;
+}
+
+
+
+
+
 #footer_down div{
     color: white;
     font-family: montserrat, sans-serif;
 }
+#footer_down{
+    display: flex;
+    justify-content:space-evenly
+}
+
+
+
+
+
 .footer_space{
     margin-top: 10px;
 }
@@ -31,28 +77,50 @@ li{
     color: white;
     list-style-type: none;
 }
-#footer_down{
-    display: flex;
-    justify-content:space-evenly
-}
-#footer_up{
-    display: flex;
-    justify-content:space-evenly
-}
-#footer_up2{
-    display: flex;   
-    margin-top: 40px;   
-}
-#footer_up2>div{
-    
-    margin-left: 100px;   
-}
-#a{
-    color:  rgb(253,216,53);
-}
+
+
+
+
+
 .b{
     color: aqua;
 }
-#logo{
-    width: 100px;
+
+#subbtn{
+    background-color: rgb(253,216,53);
+}
+
+/* keep media queries at that last */
+/* medium screens */
+@media only screen and (min-width: 421px) and (max-width: 720px) {
+    #title{
+    
+        padding: 20px, 20px, 20px, 20px;
+        color: rgb(253,216,53);
+        margin-left: 0%;
+    }
+    #footer_down{
+        display:block;
+    }
+}
+
+/* small screens */
+@media only screen and (min-width: 0px) and (max-width: 420px) {
+    #title{
+    
+        padding: 20px, 20px, 20px, 20px;
+        color: rgb(253,216,53);
+        margin-left: 0%;
+    }
+    #footer_up>div{
+        border: 2px solid green;
+        width:50%px;
+    
+    }
+    #footer_up{
+        border: 2px solid rgb(83, 222, 29);
+        justify-content: space-evenly;
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+    }
 }
