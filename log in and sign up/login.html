@@ -14,8 +14,10 @@
             box-shadow: 0 2px 10px rgb(0 0 0 / 8%);
         }
         #container{
+
             display: flex;
             margin: auto;
+            margin-top: 5px;
             justify-content: space-around;
         }
         #welcome{
@@ -213,13 +215,23 @@
             font-size: 15px;
             width: 90%;
         }
+        #container > #form-wrap > .form-body button{
+            cursor: pointer;
+        }
         @media (min-width: 992px){
             #welcome{
                 width: 50%;
                 float: left;
             }
         }
-        
+        .msgs .error{
+            font-size: 15px;
+            font-family: montserrat,sans-serif;
+            color: red;
+            margin-top: 4px;
+            text-align: left;
+            display: none;
+        }
        
        
     </style>
@@ -243,7 +255,7 @@
                 <p class="login-text">for latest trends,exciting offers and everything Bewakoof!</p>
             </div>
             <div class="form-body">
-                <form action="">
+                <form action="signup.html" onsubmit="return validated()" name="form">
                     <div id="mobile">
                         <div class="input-wrap">
                             <div class="countryCode-wrap">
@@ -258,10 +270,14 @@
                                     </select>
                                 </div>
                             </div>
-                            <input class="" id="mobile_number" type="tel" name="mobile" placeholder="Enter Mobile Number" maxlength="10" data-phonecode="+91" value="">
+                            <input class="" id="mobile_number" type="tel" name="mobile" placeholder="Enter Mobile Number" maxlength="10" data-phonecode="+91" value="" >
+                            <div class="msgs">
+                                <p class="error">Mobile Number is required</p>
+                            </div>
                         </div>
                     </div>
-                    <button id="web_continue_submit" type="submit" class="loginSubmit">Continue</button>
+                    
+                    <button id="web_continue_submit"  type="submit"  class="loginSubmit">Continue</button>
                 </form>
                 <div class="sociallogin">
                     <div class="soc-login">
@@ -300,3 +316,30 @@
     
 </body>
 </html>
+
+<script>
+    let userMobile = JSON.parse(localStorage.getItem("mobile")) || [];
+    let mobile = document.forms['form']['mobile'];
+    console.log(mobile.value);
+    let msgs = document.querySelector(".error");
+    // console.log(msgs);
+    
+    
+    function validated(){
+        
+        if(mobile.value.length<10){
+            mobile.style.border = "1px solid red";
+            msgs.style.display = "block";
+            mobile.focus();
+            return false;
+        }
+        else{
+            let number = mobile.value;
+            let obj = {number:number};
+            userMobile.push(obj);
+            localStorage.setItem("mobile",JSON.stringify(userMobile));
+        }
+    }
+
+
+</script>
