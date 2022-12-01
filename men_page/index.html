@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Online Shopping for Men, Women Clothing & Accessories at Bewakoof
+    </title>
+    <link rel="stylesheet" href="/footer_page/footer.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    #topbar {
+      /* border: 2px solid red; */
+      display: flex;
+      padding-left: 80px;
+      /* margin-top: -6px; */
+      font-size: smaller;
+      background-color: rgb(238, 238, 238);
+      height: 24px;
+      align-items: center;
+    }
+
+    #topbar > a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: rgb(81, 74, 81);
+      font-style: montserrat, sans-serif;
+      size: 10px;
+      font-weight: 500;
+      line-height: 10px;
+      font-style: normal;
+      font-size: smaller;
+    }
+
+    #topbar :nth-last-child(2) {
+      margin-left: 700px;
+    }
+
+    #navbar {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      padding-left: 100px;
+      /* margin-top: 6px; */
+      background-color: white;
+    }
+
+    #navh > a {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.9);
+    }
+
+    #navh {
+      text-decoration: none;
+      font-size: small;
+      font-family: montserrat, sans-serif;
+      size: 13px;
+      color: rgba(0, 0, 0, 0.9);
+      margin-left: 50px;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    #logo {
+      width: 70%;
+      align-items: center;
+    }
+
+    #wishlist {
+      width: 30px;
+      padding: 18px;
+    }
+
+    #navbar :nth-child(6) {
+      padding-left: 20px;
+    }
+
+    #navbar > :nth-last-child(5) {
+      margin-left: 200px;
+    }
+
+    #navbar > p {
+      padding-left: 5px;
+      padding-right: 13px;
+      font-size: 23px;
+    }
+
+    #navinp {
+      height: 35px;
+      width: 250px;
+      border-radius: 5px;
+      background-color: rgb(234, 234, 234);
+      border: none;
+      align-items: center;
+    }
+
+    #login {
+      text-decoration: none;
+      font-family: montserrat, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 50px;
+      size: 14px;
+      color: rgb(142, 142, 142);
+    }
+
+    #slas {
+      margin-left: -200px;
+    }
+  </style>
+
+  <body>
+    <div id="links" class="sticky">
+      <div id="parent">
+        <div id="topbar">
+          <a href="">Offers</a>
+          <a href="">Fanbook</a>
+          <a href="">Download App</a>
+          <a href="">TriBe Membership</a>
+          <a href="">Contact Us</a>
+          <a href="">Track Order</a>
+        </div>
+        <div id="navbar">
+          <a href=""
+            ><img
+              id="logo"
+              src="https://images.bewakoof.com/web/ic-desktop-normal-bwkf-logo.svg"
+              alt="bewokoof"
+          /></a>
+          <h3 id="navh"><a href="/Mens/mens.html">MEN</a></h3>
+          <h3 id="navh"><a href="/womens/womens.html">WOMEN</a></h3>
+          <h3 id="navh"><a href="">MOBILECOVER</a></h3>
+          <input
+            type="text"
+            name=""
+            id="navinp"
+            placeholder="Search by product category or collection"
+          />
+          <p>|</p>
+          <a id="login" href="">Login</a>
+          <a href=""
+            ><img
+              id="wishlist"
+              src="data:image/png;base64,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"
+              alt="wishlist icon"
+          /></a>
+          <a href=""
+            ><img
+              id="wishlist"
+              src="data:image/png;base64,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"
+              alt="cartbag"
+          /></a>
+        </div>
+        <hr />
+      </div>
+
+      <div id="link">
+        <div><a href="index.html">LIVE NOW!</a></div>
+        <div><a href="index.html">MEN</a></div>
+        <div><a href="/women_page/women.html">WOMEN</a></div>
+        <div><a href="/ACCESSORIES/acc.html">ACCESSORIES</a></div>
+        <div><a href="">WINTERWEAR</a></div>
+      </div>
+    </div>
+
+    <div id="parent0">
+      <img
+        src="https://images.bewakoof.com/uploads/grid/app/sleevelesspuffer-1x1-m-1669656413.gif"
+        alt=""
+      />
+      <img
+        src="https://images.bewakoof.com/uploads/grid/app/buy-3-common-1669374523.jpg"
+        alt=""
+      />
+      <img
+        src="https://images.bewakoof.com/uploads/grid/app/DOTW-1x1-homepage-banner-Men-1669723478.gif"
+        alt=""
+      />
+    </div>
+
+    <div id="parent1">
+      <img
+        src="https://images.bewakoof.com/uploads/grid/app/Desktop-Strip-1-1668681804.gif"
+        alt=""
+      />
+    </div>
+
+    <div id="parent2">
+      <div>
+        <img
+          src="https://images.bewakoof.com/uploads/grid/app/new-thumbnail-icon-2022-m-1669100399.gif"
+          alt=""
+        />
+        <p>Design of the week</p>
+      </div>
+      <div>
+        <img
+          src="https://images.bewakoof.com/uploads/grid/app/Thumbnail-Bestseller-Men-1668491213.jpg"
+          alt=""
+        />
+        <p>BestSellers</p>
+      </div>
+      <div>
+        <img
+          src="https://images.bewakoof.com/uploads/grid/app/hotdeals-2-1668491210.jpg"
+          alt=""
+        />
+        <p>Hot Deals</p>
+      </div>
+      <div>
+        <img
+          src="https://images.bewakoof.com/uploads/grid/app/Thumbnail-Customise-Men-1668491215.jpg"
+          alt=""
+        />
+        <p>Customization</p>
+      </div>
+      <div>
+        <img
+          src="https://images.bewakoof.com/uploads/grid/app/Thumbnail-New-Arrivals-Men-1668491217.jpg"
+          alt=""
+        />
+        <p>New Arrival</p>
+      </div>
+      <div>
+        <img
+          src="https://images.bewakoof.com/uploads/grid/app/last-size-new-thumbnaik-1668491212.jpg"
+          alt=""
+        />
+        <p>Last Size Left</p>
+      </div>
+      <div>
+        <img
+          src="https://images.bewakoof.com/uploads/grid/app/Thumbnail-PlusSize-Men-1668491218.jpg"
+          alt=""
+        />
+        <p>Plus Size</p>
+      </div>
+      <div>
+        <img
+          src="https://images.bewakoof.com/uploads/grid/app/Thumbnail-Collabs-Men-1668491214.jpg"
+          alt=""
+        />
+        <p>Offical Collaboration</p>
+      </div>
+      <div>
+        <img
+          src="https://images.bewakoof.com/uploads/grid/app/vote-thumbnail-1668491219.jpg"
+          alt=""
+        />
+        <p>Vote of Design</p>
+      </div>
+    </div>
+
+    <div id="parent3">
+      <div>POPULAR CATEGORIES</div>
+      <div id="parent3_1">
+        <div>
+          <img
+            src="https://images.bewakoof.com/uploads/grid/app/category-box-new-printed-tees-1668772678.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://images.bewakoof.com/uploads/grid/app/category-box-new-4-1669290758.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://images.bewakoof.com/uploads/grid/app/category-box-new-oversized-tees-1668772678.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://images.bewakoof.com/uploads/grid/app/category-box-new-sweaters-1668772681.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://images.bewakoof.com/uploads/grid/app/category-box-new-jackets-1668772676.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://images.bewakoof.com/uploads/grid/app/category-box-new-sweatshirt-hoodies-1668772681.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://images.bewakoof.com/uploads/grid/app/category-box-new-joggers-1668772677.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://images.bewakoof.com/uploads/grid/app/category-box-new-pyjamas-1668772679.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://images.bewakoof.com/uploads/grid/app/category-box-new-shirts-1668772679.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://images.bewakoof.com/uploads/grid/app/category-box-new-boxers-1668772675.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://images.bewakoof.com/uploads/grid/app/category-box-new-jeans-1668772677.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://images.bewakoof.com/uploads/grid/app/category-box-new-Shoes-1668754848.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="parent4">
+      <h2>DISCOUNT PE DISCOUNT</h2>
+      <div>
+        <img
+          src="https://images.bewakoof.com/uploads/grid/app/new-mid-banner-trendy-joggers-men-1669118120.jpg"
+          alt=""
+        />
+
+        <img
+          src="https://images.bewakoof.com/uploads/grid/app/new-mid-banner-2022-buy2at599-1668415194.jpg"
+          alt=""
+        />
+
+        <img
+          src="https://images.bewakoof.com/uploads/grid/app/streeetwear-mid-men-1669117540.jpg"
+          alt=""
+        />
+
+        <img
+          src="https://images.bewakoof.com/uploads/grid/app/revamped-banner-MdBanner-common-Flat65Off-1669214110.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div id="parent5">
+      <h2>BESTSELLERS FOR MEN</h2>
+      <div id="parent5_1">
+        <div>
+          <img
+            src="https://images.bewakoof.com/t320/men-s-black-revenge-xxx-tentacian-graphic-printed-oversized-t-shirt-555488-1669015201-1.jpg"
+            alt=""
+          />
+          <h3>₹429<span class="price">₹998</span></h3>
+        </div>
+
+        <div>
+          <img
+            src="https://images.bewakoof.com/t320/men-s-black-indian-proud-plus-size-551760-1668139600-1.jpg"
+            alt=""
+          />
+          <h3>₹549<span class="price">₹1049</span></h3>
+        </div>
+
+        <div>
+          <img
+            src="https://images.bewakoof.com/t320/men-s-white-travelling-cat-plus-size-round-neck-t-shirt-555550-1669103378-1.jpg"
+            alt=""
+          />
+          <h3>₹329<span class="price">₹799</span></h3>
+        </div>
+
+        <div>
+          <img
+            src="https://images.bewakoof.com/t320/men-s-blue-dope-bear-plus-size-round-neck-t-shirt-555586-1669103491-1.jpg"
+            alt=""
+          />
+          <h3>₹549<span class="price">₹1049</span></h3>
+        </div>
+
+        <div>
+          <img
+            src="https://images.bewakoof.com/t320/gohan-half-sleeve-t-shirt-512884-1655993277-1.jpg"
+            alt=""
+          />
+          <h3>₹499<span class="price">₹899</span></h3>
+        </div>
+      </div>
+      <h6>
+        <b><a href="/Mens/mens.html">VIEW ALL</a></b>
+      </h6>
+    </div>
+
+    <div id="parent6">
+      <img
+        src="https://images.bewakoof.com/uploads/grid/app/oversized-men--1669112734.jpg"
+        alt=""
+      />
+      <img
+        src="https://images.bewakoof.com/uploads/grid/app/newest-revamp-1x1-stripe-sweaters-m-1669102107.jpg"
+        alt=""
+      />
+      <img
+        src="https://images.bewakoof.com/uploads/grid/app/revamped-banner-1x1-SolidJacket-men-01-1669117775.jpg"
+        alt=""
+      />
+    </div>
+
+    <div id="parent7">
+      <h2>CLEARANCE ZONE</h2>
+      <div id="parent7_1">
+        <div>
+          <img
+            src="https://images.bewakoof.com/t320/men-s-black-vibes-t-shirt-298518-1655747879-5.jpg"
+            alt=""
+          />
+          <h3>₹555<span class="price">₹999</span></h3>
+        </div>
+        <div>
+          <img
+            src="https://images.bewakoof.com/t320/superman-minimal-sml-aop-half-sleeves-aop-t-shirt-303778-1656153085-6.jpg"
+            alt=""
+          />
+          <h3>₹499<span class="price">₹1059</span></h3>
+        </div>
+        <div>
+          <img
+            src="https://images.bewakoof.com/t320/men-s-blue-t-shirt-271438-1665668254-1.jpg"
+            alt=""
+          />
+          <h3>₹399<span class="price">₹1199</span></h3>
+        </div>
+        <div>
+          <img
+            src="https://images.bewakoof.com/t320/gaming-revolution-half-sleeve-t-shirt-black-331783-1655810727-5.jpg"
+            alt=""
+          />
+          <h3>₹549<span class="price">₹999</span></h3>
+        </div>
+        <div>
+          <img
+            src="https://images.bewakoof.com/t320/men-s-black-witcher-ability-t-shirt-390553-1655810761-6.jpg"
+            alt=""
+          />
+          <h3>₹559<span class="price">₹1059</span></h3>
+        </div>
+      </div>
+      <h6><b>VIEW ALL</b></h6>
+    </div>
+
+    <div id="parent8">
+      <h2>THE STOOPID COLLECTION</h2>
+      <div>
+        <img
+          src="https://images.bewakoof.com/uploads/grid/app/plus-size-men-new-1668155255.jpg"
+          alt=""
+        />
+
+        <img
+          src="https://images.bewakoof.com/uploads/grid/app/play-mid-banner-1668155255.jpg"
+          alt=""
+        />
+
+        <img
+          src="https://images.bewakoof.com/uploads/grid/app/new-mid-banner-undrdawg-1668155254.jpg"
+          alt=""
+        />
+
+        <img
+          src="https://images.bewakoof.com/uploads/grid/app/new-mid-banner-2022-men-pants-1668491468.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div id="parent9">
+      <img
+        src="https://images.bewakoof.com/uploads/grid/app/Desktop-Strip-4-1669022420.jpg"
+        alt=""
+      />
+      <img
+        src="https://images.bewakoof.com/uploads/grid/app/Desktop-Strip-3-1669022420.jpg"
+        alt=""
+      />
+    </div>
+
+    <div id="foot"></div>
+
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var navbar = document.getElementById("links");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
+  </body>
+</html>
