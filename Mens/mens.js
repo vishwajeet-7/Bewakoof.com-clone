@@ -318,17 +318,27 @@ let mens=[
     strikedoffprice: "₹3899"
   },
 ]
-
+let wishlistcount = 0;
+let wishlistarr =JSON.parse(localStorage.getItem("wishlist")) || [];
 display(mens);
 function display(arr) {
   document.getElementById("product").innerHTML=null
-    arr.map(function(elem){
+    arr.map(function(elem,index){
         let div = document.createElement("div")
         let image = document.createElement("img")
         image.setAttribute("Src", elem.img_url)
-        image.setAttribute("alt", elem.name)
+      image.setAttribute("alt", elem.name)
+      image.addEventListener("click", clickit);
+        function clickit(){
+          localStorage.setItem("addtocart",JSON.stringify(elem))
+         window.location.href="http://127.0.0.1:5500/addtocartpage/cart.html"
+        }
+      let div2=document.createElement("div")
         let bk=document.createElement("h5")
-        bk.textContent="Bewakoof"
+      bk.textContent = "Bewakoof"
+      let wish = document.createElement("img")
+      wish.setAttribute("Src", "https://static.thenounproject.com/png/3386813-200.png")
+      div2.append(bk,wish)
         let name=document.createElement("p")
         name.textContent=elem.name
         let pricebox = document.createElement("div")
@@ -337,12 +347,28 @@ function display(arr) {
         let mrp = document.createElement("h6")
         mrp.textContent = elem.strikedoffprice
         pricebox.append(price, mrp)
-        let trib=document.createElement("p")
-         div.append(image,bk, name, pricebox)
+         div.append(image,div2,name, pricebox)
          document.getElementById("product").append(div)
-        
+      wish.addEventListener("click", addtowish);
+      function addtowish() {
+        if (wish.src == "https://static.thenounproject.com/png/3386813-200.png") {
+          wishlistcount++;
+          wishlistarr.push(elem);
+          localStorage.setItem("wishlist",JSON.stringify(wishlistarr))
+          wish.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuYZAxD2szrsYBcRrtIDVo0hj_0Lfjg71ktQ&usqp=CAU"
+          console.log(wishlistcount)
+        }
+        else {
+          wishlistcount--;
+          let remove = wishlistarr.splice(index, 1);
+          localStorage.setItem("wishlist",JSON.stringify(wishlistarr))
+          wish.src = "https://static.thenounproject.com/png/3386813-200.png"
+          console.log(remove)
+        }
+}
     })
 }
+ 
 let filvalue;
 document.getElementById("category").addEventListener("change", filterit)
 function filterit() {
@@ -437,3 +463,4 @@ function sortitT(){
   }
   display(mens)
 }
+

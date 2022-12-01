@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <style>
+        *{
+            font-family: montserrat-semibold, sans-serif;
+        }
+        #parent>div>:first-child{
+            color: rgb(79,83,98);
+        }
+        #parent>div>:nth-child(2){
+            color: rgb(150,150,150);
+        }
+        #parent>div>div{
+            display: flex;
+
+        }
+        #parent{
+            display: flex;
+            
+        }
+       
+        #parent>:last-child{
+            padding-left: 30px;
+        }
+       img{
+        width:450px;
+        margin-left: 190px;
+       }
+      
+        #parent>div>div>:last-child {
+       text-decoration: line-through;
+       color: rgb(148, 148, 148);
+       margin-left: 5px;
+   }
+   #parent>div>:nth-child(5){
+    margin-left: 30px;
+    width: 220px;
+    height: 40px;
+    font-weight: 750;
+    color: rgb(158,158,158);
+   }
+   #parent>div>:nth-child(4){
+    background-color:rgb(255,216,77);
+    border-radius: 2px;
+    border: none;
+    width: 220px;
+    height: 40px;
+    font-weight: 750;
+    color: rgb(127,112,58);
+   }
+
+    </style>
+</head>
+<body>
+    <div id="parent">
+    </div>
+</body>
+</html>
+<script>
+    let bagarray = JSON.parse(localStorage.getItem("Bagarray")) || []
+    let recentcart=JSON.parse(localStorage.getItem("addtocart"));
+     let div1 = document.createElement("div")
+        let div2 = document.createElement("div")
+        document.getElementById("parent").append(div1, div2)
+        let image = document.createElement("img")
+        image.setAttribute("Src",recentcart.img_url)
+        let bk = document.createElement("h5")
+        bk.textContent = "Bewakoof";
+        div1.append(image)
+        let name = document.createElement("p")
+        name.textContent = recentcart.name;
+        let pricebox = document.createElement("div")
+        let price = document.createElement("h5")
+        price.textContent = "₹"+ recentcart.price
+        let mrp = document.createElement("h6")
+        mrp.textContent = recentcart.strikedoffprice;
+        pricebox.append(price, mrp)
+        let btn1 = document.createElement("button")
+        btn1.textContent = "ADD TO BAG"
+        let btn2 = document.createElement("button")
+        btn2.textContent = "WISHLIST"
+        div2.append(bk, name, pricebox, btn1, btn2)
+      btn1.addEventListener("click",addtobag)
+      function addtobag(){
+        btn1.textContent = "GO TO BAG" 
+        bagarray.push(recentcart);
+        localStorage.setItem("Bagarray",JSON.stringify(bagarray))
+      }
+</script>

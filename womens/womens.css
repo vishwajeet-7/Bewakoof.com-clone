@@ -15,9 +15,9 @@
      margin-left: 50px;
 
  }
-#filter{
+/* #filter{
     position: fixed;
-}
+} */
  #homemen>h3>a {
      font-size: smaller;
      text-decoration: none;
@@ -111,3 +111,9 @@
  img:hover {
      transform: scale(102%);
  }
+  #product>div>div>img {
+      width: 30px;
+      height: 30px;
+      margin-top: 15px;
+      margin-left: 200px;
+  }
