@@ -100,7 +100,7 @@
             width: 100%;
             height: 29px;
             padding: 5px 0;
-            font-size: 14px;
+            font-size: 18px;
             outline: none;
             border: none;
             border-bottom: 1px solid #bcbcbc;
@@ -109,13 +109,15 @@
             box-shadow: none;
             display: block;
             line-height: normal;
+            font-family: montserrat-bold,sans-serif;
+            font-weight: bold;
 
         }
         .signup-bodyholder .form-group input{
             height: 33px;
             padding-bottom: 0;
             font-family: montserrat-bold,sans-serif;
-            font-size: 16px;
+            font-size: 18px;
             vertical-align: middle;
         }
         .form-group .bar{
@@ -228,6 +230,7 @@
             line-height: inherit;
         }
         .loginSubmit{
+            cursor: pointer;
             width: 100%;
             height: 48px;
             border: none;
@@ -242,12 +245,12 @@
             height: 60px;
             font-size: 20px;
         }
-        button[disabled]{
+        /* button[disabled]{
             cursor: default;
         }
         .loginSubmit-disable{
             background-color: #989898;
-        }
+        } */
         #select{
             border: none;
             color: grey;
@@ -255,9 +258,18 @@
             font-size: 15px;
             width: 12%;
         }
-        /* .signup-bodyholder .signup-form .form-group .mobile-field {
-            height: 6px;
-        } */
+        .signup-bodyholder .signup-form .form-group .mobile-field {
+            margin-top: -37px;
+            padding-left: 5.5rem;
+        }
+        .signup-form{
+            overflow: hidden;
+        }
+        .msgs{
+            text-align: left;
+            color: red;
+            display: none;
+        }
 
     </style>
 </head>
@@ -290,11 +302,12 @@
                                     <h1 class="signup-text">Sign Up</h1>
                                 </div>
                                 <p class="signup-msg">Hi new buddy, let's get you started with the bewakoofi!</p>
-                                <form action="" class="signup-form">
+                                <form action="index.html" class="signup-form" name="form">
                                     <div class="form-group">
-                                        <input type="text", maxlength="71" value="">
+                                        <input type="text", maxlength="71" placeholder="Name" value="" name="name" class="name-field">
                                         <span class="bar"></span>
-                                        <label for="name">Name</label>
+                                        <!-- <label for="name">Name</label> -->
+                                        <span class="msgs"><p class="error-name">First name is required</p></span>
                                     </div>
                                     <div class="form-group">
                                         <div class="country-code-wrap">
@@ -310,19 +323,22 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <input type="text" name="mobile" maxlength="10" class="mobile-field" value="">
+                                        <input type="text" name="mobile" maxlength="10" placeholder="Mobile" class="mobile-field" value="">
                                         <span class="bar"></span>
-                                        <label for="mobile" class="mobile-label">Mobile</label>
+                                        <!-- <label for="mobile" class="mobile-label">Mobile</label> -->
+                                        <span class="msgs"><p class="error-mobile">Mobile Number is required</p></span>
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" name="email" value="">
+                                        <input type="email" name="email" placeholder="Email" value="" class="email-field">
                                         <span class="bar"></span>
-                                        <label for="email">Email Id</label>
+                                        <!-- <label for="email">Email Id</label> -->
+                                        <span class="msgs"><p class="error-email">Email is required</p></span>
                                     </div>
                                     <div class="form-group">
-                                        <input autocomplete="new-password" type="password" name="password" minlength="6" value="">
+                                        <input autocomplete="new-password" type="password" placeholder="Password" name="password" minlength="6" value="" class="password-field">
                                         <span class="bar"></span>
-                                        <label for="password">Password</label>
+                                        <!-- <label for="password">Password</label> -->
+                                        <span class="msgs"><p class="error-password">Password is required</p></span>
                                         <div class="eyeIcon-password">
                                             <img src="https://images.bewakoof.com/web/eye-open-1616575719.png" alt="password_toggle">
                                         </div>
@@ -334,7 +350,7 @@
                                         </div>
                                         <span>I want to receive order updates on Whatsapp</span>
                                     </div>
-                                    <button disabled type="submit" class="loginSubmit loginSubmit-disable">Proceed</button>
+                                    <button  type="submit" class="loginSubmit">Proceed</button>
                                 </form>
                             </div>
                         </div>
@@ -346,3 +362,33 @@
     
 </body>
 </html>
+<script>
+    let userDetails = JSON.parse(localStorage.getItem("userDetails")) || [];
+
+    let mobileNumber = JSON.parse(localStorage.getItem("mobile")) || [];
+    
+    display();
+
+    function display(){
+        mobileNumber.map(function(element){
+            document.querySelector(".mobile-field").value = element.number;
+        })
+    }
+
+    document.querySelector("form").addEventListener("submit",storeDetails);
+
+    function storeDetails(){
+        event.preventDefault();
+        let names = document.querySelector(".name-field").value;
+        let mobile = document.querySelector(".mobile-field").value;
+        let email = document.querySelector(".email-field").value;
+        let password = document.querySelector(".password-field").value;
+
+        let obj = {names: names, mobile: mobile, email: email, password: password};
+        userDetails.push(obj);
+        localStorage.setItem("userDetails",JSON.stringify(userDetails));  
+        // window.location.reload();
+    }
+
+    
+</script>
