@@ -96,3 +96,9 @@
  img:hover{
    transform: scale(102%);
  }
+ #product>div>div>img{
+    width: 30px;
+    height: 30px;
+    margin-top: 18px;
+    margin-left: 200px;
+ }
