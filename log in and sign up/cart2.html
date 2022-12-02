@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <style>
+        body{
+            overflow-y: overlay;
+            position: initial;
+            width: auto;
+            font-family: montserrat,sans-serif;
+            font-size: 14px;
+            background-color: #fff;
+            text-rendering: optimizeLegibility;
+            top: initial;
+            line-height: 1;
+        }
+        .checkoutHeader{
+            top: 0;
+            z-index: 1041;
+            width: 100%;
+            /* height: 50px; */
+            /* line-height: 50px; */
+            background-color: #fff;
+            border-bottom: 1px solid rgba(0,0,0,.2);
+            position: unset;
+            height: 56px;
+            padding-top: 12px;
+            line-height: normal;
+        }
+        .container{
+            margin-right: auto;
+            margin-left: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+        }
+        .emptypage{
+            background: #fff;
+            margin: 0 auto 10px;
+            text-align: center;
+            font-size: 18px;
+            color: rgba(0,0,0,.8);
+            min-height: 200px;
+            max-width: 430px;
+            line-height: normal;
+            padding: 30px 0px 0px;
+        }
+        .emptypage img{
+            width: 150px;
+        }
+        .clearfix .success{
+            padding: 10px;
+            border: 2px solid;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 15px;
+            color: #51cccc!important;
+            text-decoration: none;
+        }
+        .emptyListings{
+            background: #f8f8f8;
+            margin: 35px auto 10px;
+            text-align: center;
+            color: rgba(0,0,0,.8);
+            min-height: 200px;
+            max-width: 430px;
+            line-height: normal;
+            background-color: rgb(255, 255, 255);
+        }
+        .emptyListings hr{
+            height: 1px;
+            border-width: 1px 0px 0px;
+            border-top-style: solid;
+            border-right-style: initial;
+            border-bottom-style: initial;
+            border-left-style: initial;
+            border-top-color: rgb(204, 204, 204);
+            border-right-color: initial;
+            border-bottom-color: initial;
+            border-left-color: initial;
+            border-image: initial;
+        }
+        .smallText-wrap{
+            margin: 20px auto;
+        }
+        
+        .emptyListings .searchCategories {
+            vertical-align: top;
+            font-size: 14px;
+            text-align: left;
+        }
+        .emptyListings .searchCategories .option{
+            padding: 0 0 25px;
+            white-space: nowrap;
+            line-height: 30px;
+        }
+        .searchCategories .option{
+            width: 50%;
+            float: left;
+        }
+        .searchCategoriesTitle{
+            padding-right: 30px;
+            padding-top: 5px;
+        }
+        .blueText{
+            text-decoration: underline!important;
+            color: #51cccc;
+        }
+        .footer{
+            margin-top: 0px;
+            text-align: center;
+            background: rgb(251, 251, 251);
+            position: static;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    
+</body>
+</html>
+<script>
+    display();
+
+    function display(){
+        let first = document.createElement("div");
+        first.setAttribute("class", "main");
+
+        let second = document.createElement("div");
+        second.setAttribute("class","cart-wrapper");
+
+        let margin = document.createElement("div");
+        margin.setAttribute("class","margin-mobile");
+
+        let checkout = document.createElement("div");
+        checkout.setAttribute("class","checkoutHeader");
+        checkout.setAttribute("class","hidden-xs");
+
+        let container = document.createElement("div");
+        container.setAttribute("class","container");
+
+        let container3 = document.createElement("div");
+        container.setAttribute("class","container");
+
+        let container2 = document.createElement("div");
+        container2.setAttribute("class","container2");
+
+        let span = document.createElement("span");
+        container2.append(span);
+
+        let footer = document.createElement("div");
+        footer.setAttribute("class","footer");
+
+        let footImage = document.createElement("img");
+        footImage.setAttribute("src","https://images.bewakoof.com/web/secure-payments-image.png");
+        footImage.setAttribute("title","secure payements");
+        footImage.setAttribute("alt","secure payments");
+
+        
+
+        let cont = document.createElement("div");
+        cont.setAttribute("class","container-title");
+
+        let anchor = document.createElement("a");
+        anchor.setAttribute("class","active");
+        anchor.setAttribute("title","Online Lifestyle Brand - Bewakoof.com");
+        anchor.setAttribute("href","/");
+
+        let image = document.createElement("img");
+        image.setAttribute("src","https://images.bewakoof.com/web/ic-desktop-normal-bwkf-logo.svg");
+        image.setAttribute("title","Bewakoof Logo");
+        image.setAttribute("alt","bewakoof_logo");
+
+
+        let listing = document.createElement("div");
+        listing.setAttribute("class","emptyListings");
+
+        let listing2 = document.createElement("div");
+        listing2.setAttribute("class","emptyCartWish emptypage");
+
+        let image2 = document.createElement("img");
+        image2.setAttribute("src","https://images.bewakoof.com/images/doodles/empty-cart-page-doodle.png");
+        image2.setAttribute("title","Empty Cart Page Doodle");
+        image2.setAttribute("alt","Empty Cart Page Doodle");
+
+        let clearfix = document.createElement("div");
+        clearfix.setAttribute("class","clearfix");
+
+        let msg = document.createElement("div");
+        clearfix.setAttribute("class","message");
+
+        let clearfix2 = document.createElement("div");
+        clearfix2.setAttribute("class","clearfix");
+
+        let nothing = document.createElement("div");
+        nothing.textContent ="Nothing in the bag";
+
+        
+
+        let contin = document.createElement("a");
+        contin.setAttribute("class","success");
+        contin.setAttribute("hreflang","en-in");
+        contin.setAttribute("href","/");
+        contin.textContent ="Continue Shopping";
+
+        let line = document.createElement("hr");
+        
+        let smallText = document.createElement("div");
+        smallText.setAttribute("class","smallText-wrap");
+
+        let tableWrap = document.createElement("div");
+        tableWrap.setAttribute("class","table-wrap");
+
+        let smalltxt = document.createElement("span");
+        smalltxt.setAttribute("id","smallText");
+        smalltxt.textContent = "You could try one of these categories:";
+
+        let divTable = document.createElement("div");
+        
+        let table = document.createElement("table");
+        table.setAttribute("class","table");
+
+
+        let tbody = document.createElement("tbody");
+        tbody.setAttribute("class","tbody");
+
+        let tr1 = document.createElement("tr");
+        let tr2 = document.createElement("tr");
+        let tr3 = document.createElement("tr");
+
+
+        let td11 = document.createElement("td");
+        td11.setAttribute("class", "searchCategories searchCategoriesTitle");
+        td11.textContent = "Men";
+
+        let td12 = document.createElement("td");
+        td12.setAttribute("class", "row searchCategories");
+
+        let tdDiv11 = document.createElement("div");
+        tdDiv11.setAttribute("class","searchCategories option");
+
+        let tdanc11 = document.createElement("a");
+        tdanc11.setAttribute("class","blueText");
+        tdanc11.setAttribute("hreflang","en-us");
+        tdanc11.setAttribute("href","/top-wear-for-men");
+        tdanc11.textContent = "Topwear";
+        
+        tdDiv11.append(tdanc11);
+
+        let tdDiv12 = document.createElement("div");
+        tdDiv12.setAttribute("class","searchCategories option");
+
+        let tdanc12 = document.createElement("a");
+        tdanc12.setAttribute("class","blueText");
+        tdanc12.setAttribute("hreflang","en-us");
+        tdanc12.setAttribute("href","/men-bottom-wear-collection");
+        tdanc12.textContent = "Bottomwear";
+
+        tdDiv12.append(tdanc12);
+
+        let tdDiv13 = document.createElement("div");
+        tdDiv13.setAttribute("class","searchCategories option");
+
+        let tdanc13 = document.createElement("a");
+        tdanc13.setAttribute("class","blueText");
+        tdanc13.setAttribute("hreflang","en-us");
+        tdanc13.setAttribute("href","/footwear");
+        tdanc13.textContent = "Footwear";
+
+        tdDiv13.append(tdanc13);
+
+        let tdDiv14 = document.createElement("div");
+        tdDiv14.setAttribute("class","searchCategories option");
+
+        let tdanc14 = document.createElement("a");
+        tdanc14.setAttribute("class","blueText");
+        tdanc14.setAttribute("hreflang","en-us");
+        tdanc14.setAttribute("href","/bestsellers-for-men");
+        tdanc14.textContent = "Bestsellers";
+
+        tdDiv14.append(tdanc14);
+        td12.append(tdDiv11,tdDiv12,tdDiv13,tdDiv14);
+        tr1.append(td11,td12);
+
+        let td21 = document.createElement("td");
+        td21.setAttribute("class", "searchCategories searchCategoriesTitle");
+        td21.textContent = "Women";
+
+        let td22 = document.createElement("td");
+        td22.setAttribute("class", "row searchCategories");
+
+        let tdDiv21 = document.createElement("div");
+        tdDiv21.setAttribute("class","searchCategories option");
+
+        let tdanc21 = document.createElement("a");
+        tdanc21.setAttribute("class","blueText");
+        tdanc21.setAttribute("hreflang","en-us");
+        tdanc21.setAttribute("href","/top-wear-for-men");
+        tdanc21.textContent = "Topwear";
+
+        tdDiv21.append(tdanc21);
+
+        let tdDiv22 = document.createElement("div");
+        tdDiv22.setAttribute("class","searchCategories option");
+
+        let tdanc22 = document.createElement("a");
+        tdanc22.setAttribute("class","blueText");
+        tdanc22.setAttribute("hreflang","en-us");
+        tdanc22.setAttribute("href","/men-bottom-wear-collection");
+        tdanc22.textContent = "Bottomwear";
+
+        tdDiv22.append(tdanc22);
+
+        let tdDiv23 = document.createElement("div");
+        tdDiv23.setAttribute("class","searchCategories option");
+
+        let tdanc23 = document.createElement("a");
+        tdanc23.setAttribute("class","blueText");
+        tdanc23.setAttribute("hreflang","en-us");
+        tdanc23.setAttribute("href","/footwear");
+        tdanc23.textContent = "Footwear";
+
+        tdDiv23.append(tdanc23);
+
+        let tdDiv24 = document.createElement("div");
+        tdDiv24.setAttribute("class","searchCategories option");
+
+        let tdanc24 = document.createElement("a");
+        tdanc24.setAttribute("class","blueText");
+        tdanc24.setAttribute("hreflang","en-us");
+        tdanc24.setAttribute("href","/bestsellers-for-men");
+        tdanc24.textContent = "Bestsellers";
+
+        tdDiv24.append(tdanc24);
+        td22.append(tdDiv21,tdDiv22,tdDiv23,tdDiv24);
+        tr2.append(td21,td22);
+
+
+        let td31 = document.createElement("td");
+        td31.setAttribute("class", "searchCategories searchCategoriesTitle");
+        td31.textContent = "Accessories";
+
+        let td32 = document.createElement("td");
+        td32.setAttribute("class", "row searchCategories");
+
+        let tdDiv31 = document.createElement("div");
+        tdDiv31.setAttribute("class","searchCategories option");
+
+        let tdanc31 = document.createElement("a");
+        tdanc31.setAttribute("class","blueText");
+        tdanc31.setAttribute("hreflang","en-us");
+        tdanc31.setAttribute("href","/footwear");
+        tdanc31.textContent = "All Mobile Covers";
+
+
+        anchor.append(image);
+        tdDiv31.append(tdanc31);
+        td32.append(tdDiv31);
+        tr3.append(td31,td32);
+        tbody.append(tr1,tr2,tr3);
+        table.append(tbody);
+        smallText.append(smalltxt);
+        divTable.append(table);
+        tableWrap.append(divTable);
+        listing.append(line,smallText,tableWrap)
+        clearfix.append(nothing);
+        clearfix2.append(contin);
+        listing2.append(image2,clearfix,clearfix2);
+        container3.append(anchor);
+        container.append(listing2,listing);
+        footer.append(footImage);
+        checkout.append(container3);
+        margin.append(checkout,container,container2,footer);
+        second.append(margin);
+        first.append(second);
+        document.querySelector("#app").append(first);
+
+    }
+</script>
