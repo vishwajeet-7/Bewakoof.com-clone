@@ -62,6 +62,7 @@
 </body>
 </html>
 <script>
+    let wishlistarry = JSON.parse(localStorage.getItem("wishlist")) || [];
     let bagarray = JSON.parse(localStorage.getItem("Bagarray")) || []
     let recentcart=JSON.parse(localStorage.getItem("addtocart"));
      let div1 = document.createElement("div")
@@ -84,6 +85,12 @@
         btn1.textContent = "ADD TO BAG"
         let btn2 = document.createElement("button")
         btn2.textContent = "WISHLIST"
+        btn2.addEventListener("click",addtowish)
+        function addtowish(){
+            btn2.style.backgroundColor="red"
+            wishlistarry.push(recentcart);
+            localStorage.setItem("wishlist",JSON.stringify(wishlistarry))
+        }
         div2.append(bk, name, pricebox, btn1, btn2)
       btn1.addEventListener("click",addtobag)
       function addtobag(){
