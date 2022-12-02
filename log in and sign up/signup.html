@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            overflow-y: overlay;
+            position: initial;
+            width: auto;
+            top: initial;
+            font-family: montserrat,sans-serif;
+            text-rendering: optimizeLegibility;
+            line-height: 1;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            background: transparent;
+        }
+        #signup-wrap{
+            margin-top: 55px;
+        }
+        .opt-desk-view-wrap{
+            /* display: flex; */
+            margin-top: 79px;
+            height: calc(100vh - 79px);
+            background-image: linear-gradient(0deg,#fff4c4,#fff);
+        }
+        #signup-wrap .opt-desk-view-wrap .body-container{
+            background-color: transparent;
+        }
+        .opt-desk-view-wrap .body-container{
+            height: 90%;
+            margin: auto;
+            background-color: #fff;
+            box-shadow: 0 2px 31px 0 hsl(0deg 0% 73% / 7%);
+            display: flex;
+        }
+        .discount-pic, .signup-section{
+            height: 100%;
+            max-height: 1300px;
+            width: 50%;
+        }
+        .image-wrap{
+            display: flex;
+            flex-direction: column;
+            padding: 30px 60px;
+        }
+        .image-desk{
+            margin: auto;
+        }
+        .image-desk img{
+            width: 320px;
+            height: 470px;
+            margin: auto;
+        }
+        .signup-bodyholder{
+            padding: 5px 90px 20px;
+            background-color: #fff;
+            position: relative;
+            height: auto;
+            text-align: center;
+            margin-right: 180px;
+        }
+        .signup-text-wrap{
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .signup-text{
+            font-size: 26px;
+            font-family: montserrat-bold,sans-serif;
+            text-align: center;
+            font-weight: bold;
+        }
+        .signup-msg{
+            font-family: montserrat-bold,sans-serif;
+            text-align: left;
+            font-size: 20px;
+            margin: 0 0 20px;
+            color: #333;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+        .form-group{
+            width: 100%;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 45px;
+            color: #000;
+        }
+        .form-group input, .form-group select{
+            width: 100%;
+            height: 29px;
+            padding: 5px 0;
+            font-size: 18px;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #bcbcbc;
+            border-radius: 0;
+            background: none;
+            box-shadow: none;
+            display: block;
+            line-height: normal;
+            font-family: montserrat-bold,sans-serif;
+            font-weight: bold;
+
+        }
+        .signup-bodyholder .form-group input{
+            height: 33px;
+            padding-bottom: 0;
+            font-family: montserrat-bold,sans-serif;
+            font-size: 18px;
+            vertical-align: middle;
+        }
+        .form-group .bar{
+            position: relative;
+            display: block;
+            width: 100%;
+        }
+        .form-group label {
+            font-size: 16px;
+            font-weight: 500;
+            opacity: .5;
+            color: #181818;
+            position: absolute;
+            left: 0;
+            pointer-events: none;
+            transition: all .1s ease;
+            top: 20px
+        }
+        label {
+            display: inline-block;
+            max-width: 100%;
+            margin-bottom: 5px;
+            font-weight: 700;
+         }
+         .countryCode-wrap {
+            position: absolute;
+            top: 13px;
+            left: 12px;
+            -ms-flex-align: center;
+            align-items: center;
+            width: auto;
+            max-width: 72px;
+            height: 22px;
+            background: #f5f5f5;
+            padding: .5em;
+            border-radius: 2px;
+            z-index: 21;
+        }
+        .country-code-drop-down{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 13px;
+        }
+        .country-mob-code{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .country-mob-code img{
+            width: 18px;
+            height: 18px;
+        }
+        .country-mob-code span{
+            margin-left: 4px;
+            font-size: 16px;
+            color: rgba(24,24,24,.5);
+        }
+        .icon{
+            font-size: 7px;
+            margin-left: 5px;
+            color: #7a7a7a;
+            transition-property: transform;
+            transition-duration: .4s;
+        }
+        .whatsapp-toogle{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            font-size: 14px;
+            margin: 5px 0 20px;
+        }
+        .eyeIcon-password{
+            cursor: pointer;
+            position: absolute;
+            padding: 15px;
+            top: 10px;
+            right: -10px;
+        }
+        .eyeIcon-password img{
+            width: 20px;
+            height: 15px;
+        }
+        .mobile-field, .mobile-label{
+            padding-left: 5.5rem;
+        }
+        .checkbox-wrap{
+            position: relative;
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            overflow: hidden;
+            cursor: pointer;
+            float: none;
+            margin: 0 10px 0 0;
+        }
+        input[type="radio"]{
+            position: relative;
+            z-index: 9;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 0;
+            vertical-align: middle;
+            border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+        .loginSubmit{
+            cursor: pointer;
+            width: 100%;
+            height: 48px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            letter-spacing: .5px;
+            background-color: #42a2a2;
+            font-size: 16px;
+            font-family: montserrat,sans-serif;
+            color: #fff;
+            text-transform: uppercase;
+            height: 60px;
+            font-size: 20px;
+        }
+        /* button[disabled]{
+            cursor: default;
+        }
+        .loginSubmit-disable{
+            background-color: #989898;
+        } */
+        #select{
+            border: none;
+            color: grey;
+            margin: 0px -15px 0px 0px;
+            font-size: 15px;
+            width: 12%;
+        }
+        .signup-bodyholder .signup-form .form-group .mobile-field {
+            margin-top: -37px;
+            padding-left: 5.5rem;
+        }
+        .signup-form{
+            overflow: hidden;
+        }
+        .msgs{
+            text-align: left;
+            color: red;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <div id="toast-wrap">
+                <span></span>
+            </div>
+            <div id="signup-wrap">
+                <div>
+                    <header class="headerDivWrap">
+                        <div class="top-bar-wrapper"></div>
+                        <div class="main-header-wrapper"></div>
+                    </header>
+                    <div></div>
+                </div>
+                <div class="opt-desk-view-wrap">
+                    <div class="body-container">
+                        <div class="discount-pic">
+                            <div class="image-wrap">
+                                <div class="image-desk">
+                                    <img src="https://images.bewakoof.com/web/desktop-sign-up-banner--1623760676.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="signup-section">
+                            <div class="signup-bodyholder">
+                                <div class="signup-text-wrap">
+                                    <h1 class="signup-text">Sign Up</h1>
+                                </div>
+                                <p class="signup-msg">Hi new buddy, let's get you started with the bewakoofi!</p>
+                                <form action="index.html" class="signup-form" name="form">
+                                    <div class="form-group">
+                                        <input type="text", maxlength="71" placeholder="Name" value="" name="name" class="name-field">
+                                        <span class="bar"></span>
+                                        <!-- <label for="name">Name</label> -->
+                                        <span class="msgs"><p class="error-name">First name is required</p></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="country-code-wrap">
+                                            <div class="country-code-drop-down">
+                                                <div class="country-mob-code">
+                                                    <img src="https://images.bewakoof.com/web/india-flag-round-1639566913.png" alt="country flag">
+                                                    <!-- <span>+91</span> -->
+                                                </div>
+                                                <!-- <i class="fa-solid fa-caret-down"></i> -->
+                                                <select name="" id="select">
+                                                    <option value="+91">+91</option>
+                                                    <option value="+971">+971</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <input type="text" name="mobile" maxlength="10" placeholder="Mobile" class="mobile-field" value="">
+                                        <span class="bar"></span>
+                                        <!-- <label for="mobile" class="mobile-label">Mobile</label> -->
+                                        <span class="msgs"><p class="error-mobile">Mobile Number is required</p></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" placeholder="Email" value="" class="email-field">
+                                        <span class="bar"></span>
+                                        <!-- <label for="email">Email Id</label> -->
+                                        <span class="msgs"><p class="error-email">Email is required</p></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input autocomplete="new-password" type="password" placeholder="Password" name="password" minlength="6" value="" class="password-field">
+                                        <span class="bar"></span>
+                                        <!-- <label for="password">Password</label> -->
+                                        <span class="msgs"><p class="error-password">Password is required</p></span>
+                                        <div class="eyeIcon-password">
+                                            <img src="https://images.bewakoof.com/web/eye-open-1616575719.png" alt="password_toggle">
+                                        </div>
+                                    </div>
+                                    <div class="whatsapp-toogle">
+                                        <div class="checkbox-wrap">
+                                            <input type="checkbox" checked="" >
+                                            <label for="">::before</label>
+                                        </div>
+                                        <span>I want to receive order updates on Whatsapp</span>
+                                    </div>
+                                    <button  type="submit" class="loginSubmit">Proceed</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+<script>
+    let userDetails = JSON.parse(localStorage.getItem("userDetails")) || [];
+
+    let mobileNumber = JSON.parse(localStorage.getItem("mobile")) || [];
+    
+    display();
+
+    function display(){
+        mobileNumber.map(function(element){
+            document.querySelector(".mobile-field").value = element.number;
+        })
+    }
+
+    document.querySelector("form").addEventListener("submit",storeDetails);
+
+    function storeDetails(){
+        event.preventDefault();
+        let names = document.querySelector(".name-field").value;
+        let mobile = document.querySelector(".mobile-field").value;
+        let email = document.querySelector(".email-field").value;
+        let password = document.querySelector(".password-field").value;
+
+        let obj = {names: names, mobile: mobile, email: email, password: password};
+        userDetails.push(obj);
+        localStorage.setItem("userDetails",JSON.stringify(userDetails));  
+        // window.location.reload();
+    }
+
+    
+</script>

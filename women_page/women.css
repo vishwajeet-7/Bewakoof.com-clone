@@ -1,0 +1,219 @@
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+#links {
+  background-color: white;
+}
+
+#link {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  gap: 5%;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+}
+#link a {
+  font-family: montserrat-bold, sans-serif;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+#parent0 {
+  /* border: 2px solid red; */
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding-top: 120px;
+}
+#parent0 > img {
+  width: 32%;
+  /* border: 2px solid blue; */
+  align-items: center;
+}
+
+#parent1 {
+  /* border: 2px solid green; */
+  padding: 10px 0px;
+  width: 98%;
+  margin: auto;
+}
+#parent1 > img {
+  /* justify-items: center; */
+  width: 100%;
+  /* margin: auto; */
+}
+
+#parent2 {
+  /* border: 2px solid rgb(232, 125, 11); */
+  padding: 10px 0px;
+  display: flex;
+  width: 70%;
+  margin: auto;
+}
+
+#parent2 > div img {
+  size: 200px;
+  width: 90%;
+}
+#parent2 > div p {
+  text-align: center;
+  font-family: montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05px;
+  margin-top: 19px;
+}
+
+#parent3 {
+  /* border: 2px solid rgb(224, 27, 221); */
+  /* padding: 10px 0px; */
+  text-align: center;
+  padding: 30px 0px;
+}
+#parent3 > div {
+  margin-bottom: 3px;
+  font-family: montserrat, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: black;
+  font-size: 20px;
+}
+#parent3_1 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+#parent4 > h2 {
+  margin-bottom: 15px;
+  font-family: montserrat, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+}
+#parent4 div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+#parent4 div > img {
+  margin: auto;
+  width: 100%;
+}
+#parent5 {
+  margin: 40px 0px -10px 0px;
+}
+#parent5 > h2 {
+  margin-bottom: 40px;
+  font-family: montserrat, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: black;
+  font-size: 16px;
+  text-align: center;
+}
+#parent5_1 {
+  /* border: 2px solid rgb(61, 32, 32); */
+  display: flex;
+  width: 100%;
+
+  /* align-items: center; */
+
+  /* grid-template-columns: repeat(5, 1fr);
+    gap: 5px; */
+}
+#parent5_1 > div > img {
+  /* border: 2px solid rgb(26, 216, 48); */
+  width: 90%;
+}
+#parent5 > h6 {
+  font-size: 12px;
+  text-align: center;
+  color: teal;
+  font-family: montserrat-bold, sans-serif;
+  text-decoration: underline;
+}
+
+#parent6 {
+  /* border: 2px solid red; */
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 10px 0px;
+}
+#parent6 > img {
+  width: 32%;
+  /* border: 2px solid blue; */
+  align-items: center;
+}
+#parent7 > h2 {
+  margin: 30px 0px;
+  font-family: montserrat, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: black;
+  font-size: 16px;
+  text-align: center;
+}
+#parent7_1 {
+  display: flex;
+  width: 100%;
+}
+#parent7_1 > div > img {
+  width: 90%;
+}
+#parent7 > h6 {
+  font-size: 12px;
+  text-align: center;
+  color: teal;
+  font-family: montserrat-bold, sans-serif;
+  text-decoration: underline;
+}
+
+#parent8 > h2 {
+  margin-bottom: 40px;
+  font-family: montserrat, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: black;
+  font-size: 16px;
+  text-align: center;
+}
+#parent8 div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+#parent8 div > img {
+  margin: auto;
+  width: 100%;
+}
+#parent9 {
+  /* border: 2px solid green; */
+  width: 98%;
+  /* margin: auto; */
+}
+#parent9 > img {
+  margin-top: 10px;
+  width: 103%;
+  /* margin: auto; */
+}
+.price {
+  color: gray;
+  font-size: 15px;
+  margin-left: 5px;
+  text-decoration: line-through;
+}
