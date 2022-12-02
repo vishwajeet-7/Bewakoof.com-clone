@@ -175,10 +175,11 @@ let cover = [
     },
 ]
 let wishlistcount = 0;
+let wishlistarry =JSON.parse(localStorage.getItem("wishlist")) || [];
 display(cover);
 function display(arr) {
   document.getElementById("product").innerHTML=null
-    arr.map(function(elem){
+    arr.map(function(elem,index){
         let div = document.createElement("div")
         let image = document.createElement("img")
       image.setAttribute("Src", elem.img_url)
@@ -208,11 +209,15 @@ function display(arr) {
       function addtowish() {
         if (wish.src == "https://static.thenounproject.com/png/3386813-200.png") {
           wishlistcount++;
+          wishlistarry.push(elem);
+          localStorage.setItem("wishlist",JSON.stringify(wishlistarry))
           wish.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuYZAxD2szrsYBcRrtIDVo0hj_0Lfjg71ktQ&usqp=CAU"
           console.log(wishlistcount)
         }
         else {
-          wishlistcount--;
+           wishlistcount--;
+          let removed = wishlistarry.splice(index, 1);
+          localStorage.setItem("wishlist",JSON.stringify(wishlistarry))
           wish.src = "https://static.thenounproject.com/png/3386813-200.png"
           console.log(wishlistcount)
         }
@@ -238,3 +243,9 @@ function sortitT(){
   }
   display(cover)
 }
+$(function(){
+ $("#top").load("/Navbar/Navbar.html"); 
+});
+$(function(){
+ $("#foot").load("/footer_page/footer.html"); 
+});

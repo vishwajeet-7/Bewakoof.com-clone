@@ -61,8 +61,8 @@
   width: 80%;
   margin: auto;
 }
-
-#parent2 div {
+gi
+#parent2>div {
   margin-top: 5px;
   /* border: 2px solid green; */
   width: 10%;
