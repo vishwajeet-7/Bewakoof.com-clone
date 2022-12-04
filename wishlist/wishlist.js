@@ -1,6 +1,7 @@
     let wishlistarray=JSON.parse(localStorage.getItem("wishlist")) || []
     display(wishlistarray);
-        function display(arr) {
+function display(arr) {
+            document.getElementById("product").innerHTML=null
             arr.map(function (elem, index) {
                 let div = document.createElement("div")
                 let image = document.createElement("img")
@@ -21,6 +22,15 @@
                 btn.textContent="MOVE TO BAG"
                 div.append(image, div2, name, pricebox,btn)
                 document.getElementById("product").append(div)
+                btn.addEventListener("click", addtocart)
+                function addtocart() {
+                    let arr = JSON.parse(localStorage.getItem("Bagarray")) || []
+                    arr.push(elem);
+                    localStorage.setItem("Bagarray", JSON.stringify(arr));
+                    let remove = wishlistarray.splice(index, 1)
+                    localStorage.setItem("wishlist", JSON.stringify(wishlistarray));
+                    display(wishlistarray)
+                }
             })
         }
 $(function(){
