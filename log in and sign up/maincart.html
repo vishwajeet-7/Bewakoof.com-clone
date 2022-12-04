@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart page with added products</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <div id="parent">
+        <div id="logo">
+            <img src="https://images.bewakoof.com/web/ic-desktop-normal-bwkf-logo.svg" alt="">
+        </div>
+        <div id="mail">
+            <p>Signed as</p>
+            <p>happysoumya3@gmail.com</p>
+        </div>
+    </div>
+    <div id="app">
+        <div class="container-product-item">
+            <div class="left-section-wrap">
+                <div class="qty"></div>
+                <div id="df-wrap"></div>
+            </div>
+            <div class="summary-wrap"></div>
+        </div>
+        <div class="footer-wrap"></div>
+    </div>
+</body>
+</html>
+<script>
+    
+    let productDetails = JSON.parse(localStorage.getItem("Bagarray")) || [];
+    let countItems = 0;
+    let totalAmount = 0;
+    let totalMrp = 0;
+    
+    if(productDetails.length == 0){
+        console.log("test");
+        display();
+        function display(){
+            let first = document.createElement("div");
+            first.setAttribute("class", "main");
+
+            let second = document.createElement("div");
+            second.setAttribute("class","cart-wrapper");
+
+            let margin = document.createElement("div");
+            margin.setAttribute("class","margin-mobile");
+
+            // let checkout = document.createElement("div");
+            // checkout.setAttribute("class","checkoutHeader");
+            // checkout.setAttribute("class","hidden-xs");
+
+            let container = document.createElement("div");
+            container.setAttribute("class","container");
+
+            let container3 = document.createElement("div");
+            container.setAttribute("class","container");
+
+            let container2 = document.createElement("div");
+            container2.setAttribute("class","container2");
+
+            let span = document.createElement("span");
+            container2.append(span);
+
+            let footImage = document.createElement("img");
+            footImage.setAttribute("src","https://images.bewakoof.com/web/secure-payments-image.png");
+            footImage.setAttribute("title","secure payements");
+            footImage.setAttribute("alt","secure payments");
+            // document.querySelector(".footer").append(footImage);
+
+            let footdiv = document.createElement("div");
+            footdiv.setAttribute("class","foot-div")
+            
+
+            let cont = document.createElement("div");
+            cont.setAttribute("class","container-title");
+
+            let anchor = document.createElement("a");
+            anchor.setAttribute("class","active");
+            anchor.setAttribute("title","Online Lifestyle Brand - Bewakoof.com");
+            anchor.setAttribute("href","/");
+
+            let image = document.createElement("img");
+            image.setAttribute("src","https://images.bewakoof.com/web/ic-desktop-normal-bwkf-logo.svg");
+            image.setAttribute("title","Bewakoof Logo");
+            image.setAttribute("alt","bewakoof_logo");
+
+
+            let listing = document.createElement("div");
+            listing.setAttribute("class","emptyListings");
+
+            let listing2 = document.createElement("div");
+            listing2.setAttribute("class","emptyCartWish emptypage");
+
+            let image2 = document.createElement("img");
+            image2.setAttribute("src","https://images.bewakoof.com/images/doodles/empty-cart-page-doodle.png");
+            image2.setAttribute("title","Empty Cart Page Doodle");
+            image2.setAttribute("alt","Empty Cart Page Doodle");
+
+            let clearfix = document.createElement("div");
+            clearfix.setAttribute("class","clearfix");
+
+            let msg = document.createElement("div");
+            clearfix.setAttribute("class","message");
+
+            let clearfix2 = document.createElement("div");
+            clearfix2.setAttribute("class","clearfix");
+
+            let nothing = document.createElement("div");
+            nothing.textContent ="Nothing in the bag";
+
+            
+
+            let contin = document.createElement("a");
+            contin.setAttribute("class","success");
+            contin.setAttribute("hreflang","en-in");
+            contin.setAttribute("href","/");
+            contin.textContent ="Continue Shopping";
+
+            let line = document.createElement("hr");
+            
+            let smallText = document.createElement("div");
+            smallText.setAttribute("class","smallText-wrap");
+
+            let tableWrap = document.createElement("div");
+            tableWrap.setAttribute("class","table-wrap");
+
+            let smalltxt = document.createElement("span");
+            smalltxt.setAttribute("id","smallText");
+            smalltxt.textContent = "You could try one of these categories:";
+
+            let divTable = document.createElement("div");
+            
+            let table = document.createElement("table");
+            table.setAttribute("class","table");
+
+
+            let tbody = document.createElement("tbody");
+            tbody.setAttribute("class","tbody");
+
+            let tr1 = document.createElement("tr");
+            let tr2 = document.createElement("tr");
+            let tr3 = document.createElement("tr");
+
+
+            let td11 = document.createElement("td");
+            td11.setAttribute("class", "searchCategories searchCategoriesTitle");
+            td11.textContent = "Men";
+
+            let td12 = document.createElement("td");
+            td12.setAttribute("class", "row searchCategories");
+
+            let tdDiv11 = document.createElement("div");
+            tdDiv11.setAttribute("class","searchCategories option");
+
+            let tdanc11 = document.createElement("a");
+            tdanc11.setAttribute("class","blueText");
+            tdanc11.setAttribute("hreflang","en-us");
+            tdanc11.setAttribute("href","/top-wear-for-men");
+            tdanc11.textContent = "Topwear";
+            
+            tdDiv11.append(tdanc11);
+
+            let tdDiv12 = document.createElement("div");
+            tdDiv12.setAttribute("class","searchCategories option");
+
+            let tdanc12 = document.createElement("a");
+            tdanc12.setAttribute("class","blueText");
+            tdanc12.setAttribute("hreflang","en-us");
+            tdanc12.setAttribute("href","/men-bottom-wear-collection");
+            tdanc12.textContent = "Bottomwear";
+
+            tdDiv12.append(tdanc12);
+
+            let tdDiv13 = document.createElement("div");
+            tdDiv13.setAttribute("class","searchCategories option");
+
+            let tdanc13 = document.createElement("a");
+            tdanc13.setAttribute("class","blueText");
+            tdanc13.setAttribute("hreflang","en-us");
+            tdanc13.setAttribute("href","/footwear");
+            tdanc13.textContent = "Footwear";
+
+            tdDiv13.append(tdanc13);
+
+            let tdDiv14 = document.createElement("div");
+            tdDiv14.setAttribute("class","searchCategories option");
+
+            let tdanc14 = document.createElement("a");
+            tdanc14.setAttribute("class","blueText");
+            tdanc14.setAttribute("hreflang","en-us");
+            tdanc14.setAttribute("href","/bestsellers-for-men");
+            tdanc14.textContent = "Bestsellers";
+
+            tdDiv14.append(tdanc14);
+            td12.append(tdDiv11,tdDiv12,tdDiv13,tdDiv14);
+            tr1.append(td11,td12);
+
+            let td21 = document.createElement("td");
+            td21.setAttribute("class", "searchCategories searchCategoriesTitle");
+            td21.textContent = "Women";
+
+            let td22 = document.createElement("td");
+            td22.setAttribute("class", "row searchCategories");
+
+            let tdDiv21 = document.createElement("div");
+            tdDiv21.setAttribute("class","searchCategories option");
+
+            let tdanc21 = document.createElement("a");
+            tdanc21.setAttribute("class","blueText");
+            tdanc21.setAttribute("hreflang","en-us");
+            tdanc21.setAttribute("href","/top-wear-for-men");
+            tdanc21.textContent = "Topwear";
+
+            tdDiv21.append(tdanc21);
+
+            let tdDiv22 = document.createElement("div");
+            tdDiv22.setAttribute("class","searchCategories option");
+
+            let tdanc22 = document.createElement("a");
+            tdanc22.setAttribute("class","blueText");
+            tdanc22.setAttribute("hreflang","en-us");
+            tdanc22.setAttribute("href","/men-bottom-wear-collection");
+            tdanc22.textContent = "Bottomwear";
+
+            tdDiv22.append(tdanc22);
+
+            let tdDiv23 = document.createElement("div");
+            tdDiv23.setAttribute("class","searchCategories option");
+
+            let tdanc23 = document.createElement("a");
+            tdanc23.setAttribute("class","blueText");
+            tdanc23.setAttribute("hreflang","en-us");
+            tdanc23.setAttribute("href","/footwear");
+            tdanc23.textContent = "Footwear";
+
+            tdDiv23.append(tdanc23);
+
+            let tdDiv24 = document.createElement("div");
+            tdDiv24.setAttribute("class","searchCategories option");
+
+            let tdanc24 = document.createElement("a");
+            tdanc24.setAttribute("class","blueText");
+            tdanc24.setAttribute("hreflang","en-us");
+            tdanc24.setAttribute("href","/bestsellers-for-men");
+            tdanc24.textContent = "Bestsellers";
+
+            tdDiv24.append(tdanc24);
+            td22.append(tdDiv21,tdDiv22,tdDiv23,tdDiv24);
+            tr2.append(td21,td22);
+
+
+            let td31 = document.createElement("td");
+            td31.setAttribute("class", "searchCategories searchCategoriesTitle");
+            td31.textContent = "Accessories";
+
+            let td32 = document.createElement("td");
+            td32.setAttribute("class", "row searchCategories");
+
+            let tdDiv31 = document.createElement("div");
+            tdDiv31.setAttribute("class","searchCategories option");
+
+            let tdanc31 = document.createElement("a");
+            tdanc31.setAttribute("class","blueText");
+            tdanc31.setAttribute("hreflang","en-us");
+            tdanc31.setAttribute("href","/footwear");
+            tdanc31.textContent = "All Mobile Covers";
+
+
+            anchor.append(image);
+            tdDiv31.append(tdanc31);
+            td32.append(tdDiv31);
+            tr3.append(td31,td32);
+            tbody.append(tr1,tr2,tr3);
+            table.append(tbody);
+            smallText.append(smalltxt);
+            divTable.append(table);
+            tableWrap.append(divTable);
+            listing.append(line,smallText,tableWrap)
+            clearfix.append(nothing);
+            clearfix2.append(contin);
+            listing2.append(image2,clearfix,clearfix2);
+            container3.append(anchor);
+            container.append(listing2,listing);
+            footdiv.append(footImage);
+            // checkout.append(container3);
+            margin.append(container,container2,footdiv);
+            second.append(margin);
+            first.append(second);
+            document.querySelector("#app").append(first);
+            // window.location.reload();
+        }
+    }
+    else{
+        
+        display();
+        function display(){
+
+                productDetails.map(function(element,index){
+                    countItems++;
+                    totalAmount += +element.price;
+                    totalMrp += +element.strikedoffprice;
+
+                    let headspan = document.createElement("span");
+                    headspan.setAttribute("class","qty");
+                    headspan.textContent = "My bag";
+
+                    let spanPara = document.createElement("p");
+                    spanPara.textContent = "";
+
+                    // document.querySelector(".cartdekHead").append(headspan,spanPara);
+
+                    let productName = document.createElement("a");
+                    productName.textContent = element.name;
+                    productName.setAttribute("class","cartProductName");
+                    productName.setAttribute("href","");
+
+                    let productPriceDetails = document.createElement("div");
+                    productPriceDetails.setAttribute("class","productPriceDetails clearfix");
+
+                    let productPrice = document.createElement("span");
+                    productPrice.setAttribute("class","cartProductPrice");
+
+                    let price = document.createElement("b");
+                    price.textContent = "₹"+ element.price;
+
+                    let productmrp = document.createElement("span");
+                    productmrp.setAttribute("class","cartProductMrp");
+                    productmrp.textContent =  element.strikedoffprice
+
+                    let prospan = document.createElement("span");
+                    prospan.append(productName);
+
+                    productPrice.append(price);
+                    productPriceDetails.append(productPrice,productmrp);
+
+                    let cartProductInfoMsg = document.createElement("div");
+                    cartProductInfoMsg.setAttribute("class","cart-prod-info-msg");
+                    cartProductInfoMsg.textContent = "You saved ₹";
+
+                    let size = document.createElement("div");
+                    size.setAttribute("class","cartModOptions")
+                    
+
+                    let sizeInner = document.createElement("div");
+                    sizeInner.setAttribute("class","cartModOptionsInner");
+
+                    let selectSize = document.createElement("select");
+                    selectSize.setAttribute("class","size-select");
+
+                    let sizeOptions1 = document.createElement("option");
+                    sizeOptions1.setAttribute("value",element.size);
+                    sizeOptions1.textContent = element.size;
+
+                    let sizeOptions2 = document.createElement("option");
+                    sizeOptions2.setAttribute("value","S");
+                    sizeOptions2.textContent = "S";
+
+                    let sizeOptions3 = document.createElement("option");
+                    sizeOptions3.setAttribute("value","M");
+                    sizeOptions3.textContent = "M";
+
+                    let sizeOptions4 = document.createElement("option");
+                    sizeOptions4.setAttribute("value","L");
+                    sizeOptions4.textContent = "L";
+
+                    let sizeOptions5 = document.createElement("option");
+                    sizeOptions5.setAttribute("value","XL");
+                    sizeOptions5.textContent = "XL";
+
+                    let sizeText = document.createElement("span");
+                    sizeText.textContent = "Size:";
+
+                    selectSize.append(sizeOptions1,sizeOptions2,sizeOptions3,sizeOptions4,sizeOptions5);
+                    size.append(sizeText,selectSize);
+                    sizeInner.append(size);
+
+                    let quantity = document.createElement("div");
+                    quantity.setAttribute("class","cartModOptions")
+
+                    let quantityInner = document.createElement("div");
+                    quantityInner.setAttribute("class","cartModOptionsInner");
+
+                    let selectQty = document.createElement("select");
+                    selectQty.setAttribute("class","quanity-select");
+                    selectQty.setAttribute("onchange","qtyFunction()");
+                    
+
+                    let qtyOptions1 = document.createElement("option");
+                    qtyOptions1.setAttribute("value","1");
+                    qtyOptions1.textContent = "1";
+
+                    let qtyOptions2 = document.createElement("option");
+                    qtyOptions2.setAttribute("value","2");
+                    qtyOptions2.textContent = "2";
+
+                    let qtyOptions3 = document.createElement("option");
+                    qtyOptions3.setAttribute("value","3");
+                    qtyOptions3.textContent = "3";
+
+                    let qtyOptions4 = document.createElement("option");
+                    qtyOptions4.setAttribute("value","4");
+                    qtyOptions4.textContent = "4";
+
+                    let qtyText = document.createElement("span");
+                    qtyText.textContent = "Qty:";
+
+                    let cartModWrap = document.createElement("div");
+                    cartModWrap.setAttribute("class","cartModOptionsWrap");
+
+                    selectQty.append(qtyOptions1,qtyOptions2,qtyOptions3,qtyOptions4);
+                    quantity.append(qtyText,selectQty);
+                    quantityInner.append(quantity);
+
+                    cartModWrap.append(sizeInner,quantityInner);
+
+                    let sizePromo = document.createElement("div");
+                    sizePromo.setAttribute("class","productPromoMsg");
+                    // sizePromo.textContent = "Size is not available";
+
+                    let prodText = document.createElement("div");
+                    prodText.setAttribute("class","cartProdText");
+
+                    prodText.append(prospan,productPriceDetails,cartProductInfoMsg,cartModWrap,sizePromo);
+
+                    let img = document.createElement("img");
+                    img.setAttribute("src",element.img_url);
+
+                    let anchor = document.createElement("a");
+                    anchor.setAttribute("href","");
+
+                    anchor.append(img);
+
+                    let cartProdImg = document.createElement("div");
+                    cartProdImg.setAttribute("class","cartProductImg");
+                    cartProdImg.append(anchor);
+
+                    let prodRow = document.createElement("div");
+                    prodRow.setAttribute("class","prod-row");
+
+                    prodRow.append(prodText,cartProdImg);
+
+                    let cartProdInner = document.createElement("div");
+                    cartProdInner.setAttribute("class","cartProductInner");
+                    cartProdInner.append(prodRow);
+
+                    let remove = document.createElement("div");
+                    remove.setAttribute("id","remove");
+                    remove.textContent = "Remove";
+                    remove.addEventListener("click",function(){
+                        removeFunction(element,index);
+                    });
+
+                    let saveForLater = document.createElement("div");
+                    saveForLater.setAttribute("id","saveForLater");
+                    saveForLater.textContent = "Move to wishlist";
+                    saveForLater.addEventListener("click",function(){
+                        moveToWishlist(element,index);
+                    })
+
+                    let cartactions =document.createElement("div");
+                    cartactions.setAttribute("class","cartProductActions");
+                    cartactions.append(remove,saveForLater);
+
+                    let cartbottom =document.createElement("div");
+                    cartbottom.setAttribute("class","cartBottomAction");
+                    cartbottom.append(cartactions);
+
+                    let cartprodwrap =document.createElement("div");
+                    cartprodwrap.setAttribute("class","cartProduct");
+                    cartprodwrap.append(cartProdInner,cartbottom);
+
+                    let cartProductContainer = document.createElement("div");
+                    cartProductContainer.setAttribute("class","cartProductBorder clearflix");
+
+                    cartProductContainer.append(cartprodwrap);
+                    document.querySelector(".left-section-wrap").append(cartProductContainer);
+
+                });
+                let itemQty = document.createElement("span");
+                    itemQty.setAttribute("class","itemQty");
+                    itemQty.textContent = "My Bag";
+
+                    let bold = document.createElement("p");
+                    bold.textContent = countItems;
+                    document.querySelector(".qty").append(itemQty,bold);
+
+                let deliveryWrapInner = document.createElement("div");
+                deliveryWrapInner.setAttribute("class","df-inner");
+
+                let truck = document.createElement("img");
+                truck.setAttribute("src","https://images.bewakoof.com/web/Red-truck.png");
+                truck.setAttribute("class","df-img");
+                truck.setAttribute("alt","truck");
+
+                let para = document.createElement("p");
+                para.textContent = "Yay! You get free delivery on this order";
+
+                deliveryWrapInner.append(truck,para);
+                document.querySelector("#df-wrap").append(deliveryWrapInner);
+
+                let leftmain = document.createElement("div");
+                leftmain.setAttribute("class","col-sm-7 noPd");
+
+                let coupan = document.createElement("span");
+                coupan.setAttribute("class","coupanSuccess");
+                
+                let div = document.createElement("div");
+                coupan.append(div);
+
+                let tribeText = document.createElement("div");
+                tribeText.setAttribute("class","cart-story-tribe-text");
+
+                let tribe = document.createElement("p");
+                tribe.textContent = "Save extra ₹160 with Tribe";
+                tribeText.append(tribe);
+
+                let flex = document.createElement("div");
+                flex.setAttribute("class","side-arrow");
+
+                let tribeWrap = document.createElement("div");
+                tribeWrap.setAttribute("class","cart-story-tribe-wrap");
+                tribeWrap.append(tribeText,flex);
+
+                let offerbox = document.createElement("div");
+                offerbox.setAttribute("class","offerbox");
+
+                let div2 = document.createElement("div");
+                div2.textContent = "Whistles! Get extra 10% Cashback on prepaid orders above Rs.699. Coupon code - PAYDAY.";
+
+                offerbox.append(div2);
+
+                let offerbox2 = document.createElement("div");
+                offerbox2.setAttribute("class","offerbox");
+
+                let div3 = document.createElement("div");
+                div3.textContent = "Get Rs.200 instant discount on your First Purchase above Rs.999. Coupon code -NEW200";
+
+                offerbox2.append(div3);
+
+                let offerbox3 = document.createElement("div");
+                offerbox3.setAttribute("class","offerbox");
+
+                let div4 = document.createElement("div");
+                div4.textContent = "Whistles! Get extra 20% Cashback on prepaid orders above Rs.499. Coupon code - NEW20. Applicable for new customers only!";
+
+                offerbox3.append(div4);
+
+                let redeem = document.createElement("span");
+                redeem.setAttribute("class","redeem");
+                redeem.textContent = "Redeem";
+
+                let arrowImg = document.createElement("img");
+                arrowImg.setAttribute("src","https://images.bewakoof.com/web/coupon-redeem-arrow-1634641878.png");
+                redeem.append(arrowImg);
+
+                let span = document.createElement("span");
+                span.textContent = "Have a Coupon / Referral / Gift Card ?";
+
+                let redeemButton = document.createElement("div");
+                redeem.setAttribute("class","redeem-button");
+                redeemButton.append(span,redeem);
+
+                let redeemButtonWrap = document.createElement("div");
+                redeemButtonWrap.setAttribute("class","redeem-button-wrap");
+                redeemButtonWrap.append(redeemButton);
+
+                let topHeading = document.createElement("div");
+                topHeading.setAttribute("class","sectionTopHeading");
+
+                let title = document.createElement("h4");
+                title.textContent = "Price Summary";
+
+                topHeading.append(title);
+
+                let charge1 = document.createElement("p");
+                charge1.textContent = "Total MRP (Inc. of taxes)";
+
+                let charge11 = document.createElement("p");
+                charge11.textContent = totalMrp;
+                
+                let chargeBox = document.createElement("div");
+                chargeBox.setAttribute("class","paymentBoxInner");
+                chargeBox.append(charge1,charge11);
+
+                let charge2 = document.createElement("p");
+                charge2.textContent = "Shipping Charges";
+
+                let charge21 = document.createElement("p");
+                charge21.textContent = "FREE"
+                
+                let chargeBox2 = document.createElement("div");
+                chargeBox2.setAttribute("class","paymentBoxInner");
+                chargeBox2.append(charge2,charge21);
+
+                let charge3 = document.createElement("p");
+                charge3.textContent = "Bag Discount";
+
+                let charge31 = document.createElement("p");
+                
+                let chargeBox3 = document.createElement("div");
+                chargeBox3.setAttribute("class","paymentBoxInner");
+                chargeBox3.append(charge3,charge31);
+
+                let charge4 = document.createElement("p");
+                charge4.textContent = "Subtotal";
+
+                let charge41 = document.createElement("p");
+                charge41.textContent = totalAmount;
+
+                
+                let chargeBox4 = document.createElement("div");
+                chargeBox4.setAttribute("class","paymentBoxInner");
+                chargeBox4.append(charge4,charge41);
+
+                let savingLabel = document.createElement("div");
+                savingLabel.setAttribute("class","savingLabel");
+
+                let p1 = document.createElement("p");
+                p1.setAttribute("class","saving-label");
+                p1.textContent = "You are saving"
+
+                let p2 = document.createElement("p");
+                p2.textContent = "";
+
+                p1.append(p2);
+                savingLabel.append(p1,p2);
+
+                let total = document.createElement("span");
+                total.textContent = "Total ₹";
+
+                let totalPrice = document.createElement("p");
+                totalPrice.textContent = totalAmount;
+
+                let totalPriceWrap = document.createElement("div");
+                totalPriceWrap.setAttribute("class","total-price-wap");
+                totalPriceWrap.append(total,totalPrice);
+
+                let continueButton = document.createElement("button");
+                continueButton.setAttribute("id","paynow-btn");
+                continueButton.textContent = "CONTINUE";
+
+                let payWrap = document.createElement("div");
+                payWrap.setAttribute("class","paynow-wrap")
+                payWrap.append(totalPriceWrap,continueButton);
+
+                let paymentBox = document.createElement("div");
+                paymentBox.setAttribute("class","payment-btn-box");
+                paymentBox.append(payWrap);
+
+                let paymentBoxWrap = document.createElement("div");
+                paymentBoxWrap.setAttribute("class","payment-box-wrap");
+                paymentBoxWrap.append(chargeBox,chargeBox2,chargeBox3,chargeBox4,savingLabel,paymentBox);
+
+                let mainPaymentBox = document.createElement("div");
+                mainPaymentBox.setAttribute("class","main-box");
+                mainPaymentBox.append(paymentBoxWrap);
+
+                let summaryBox = document.createElement("div");
+                summaryBox.setAttribute("class","summaryBoxBorder");
+                summaryBox.append(topHeading,mainPaymentBox);
+                
+
+                document.querySelector(".summary-wrap").append(tribeWrap,offerbox,offerbox2,offerbox3,redeemButtonWrap,summaryBox);
+
+                let footerImg = document.createElement("img");
+                footerImg.setAttribute("src","https://images.bewakoof.com/web/secure-payments-image.png");
+                footerImg.setAttribute("alt","secure payments");
+
+                document.querySelector(".footer-wrap").append(footerImg);
+
+                
+            }
+
+    } 
+    function removeFunction(element,index){
+        countItems--;
+        totalAmount -= element.price;
+        totalMrp -= element.strikedoffprice;
+        event.target.parentNode.parentNode.remove();
+        let updated = productDetails.splice(index,1);
+        localStorage.setItem("Bagarray",JSON.stringify(productDetails));
+        window.location.reload();
+    }
+
+    // function moveToWishlist(element,index){
+    //     countItems--;
+    //     totalAmount -= element.price;
+    //     totalMrp -= element.strikedoffprice;
+    //     event.target.parentNode.parentNode.remove();
+    //     let wishlist = productDetails.splice(index,1);
+    //     localStorage.setItem("Bagarray",JSON.stringify(productDetails));
+    //     localStorage.setItem("wishlist",JSON.stringify(wishlist));
+    //     window.location.reload();
+    // }
+
+    function qtyFunction(){
+        let val = document.querySelector(".quantity-select");
+        let sum = val.value;
+        console.log(sum);
+        
+    }
+
+
+    
+
+  
+</script>

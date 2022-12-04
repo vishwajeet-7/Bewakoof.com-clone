@@ -1,0 +1,104 @@
+#topbar {
+    display: flex;
+    padding-left: 80px;
+    margin-top: -6px;
+    font-size: smaller;
+    background-color: rgb(238, 238, 238);
+    height: 24px;
+    align-items: center;
+}
+
+#topbar>a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: rgb(81, 74, 81);
+    font-style: montserrat, sans-serif;
+    size: 10px;
+    font-weight: 500;
+    line-height: 10px;
+    font-style: normal;
+    font-size: smaller
+}
+
+#topbar :nth-last-child(2) {
+    margin-left: 700px;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding-left: 100px;
+    margin-top: 6px;
+}
+
+#navh>a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.9);
+    ;
+}
+
+#navh {
+    text-decoration: none;
+    font-size: small;
+    font-family: montserrat, sans-serif;
+    size: 13px;
+    color: rgba(0, 0, 0, 0.9);
+    margin-left: 50px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#logo {
+    height: 25px;
+    width: 50%;
+    align-items: center;
+}
+
+#wishlist {
+    width: 30px;
+    padding: 18px;
+}
+
+#navbar :nth-child(6) {
+    padding-left: 20px;
+
+}
+
+#navbar>:nth-last-child(5) {
+    margin-left: 200px;
+}
+
+#navbar>p {
+    padding-left: 5px;
+    padding-right: 13px;
+    font-size: 23px;
+}
+
+#navinp {
+    height: 40px;
+    width: 250px;
+    border-radius: 5px;
+    background-color: rgb(234, 234, 234);
+    border: none;
+    align-items: center;
+
+}
+
+#login {
+    text-decoration: none;
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 50px;
+    size: 14px;
+    color: rgb(142, 142, 142);
+}
+#parent>:last-child{
+    margin-top: 8px;
+}
+
+
+#slas{
+margin-left: -200px;
+}
