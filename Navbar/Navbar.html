@@ -10,7 +10,7 @@
         #topbar {
             display: flex;
             padding-left: 80px;
-            margin-top: -6px;
+            margin-top: -12px;
             font-size: smaller;
             background-color: rgb(238, 238, 238);
             height: 24px;
@@ -111,13 +111,22 @@
       #slas{
         margin-left: -200px;
       }
-      
+      .sticky {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
     </style>
 </head>
 
 <body>
     <div id="parent">
-        <div id="topbar">
+        <div class="sticky">
+        <div id="topbar" >
             <a href="">Offers</a>
             <a href="">Fanbook</a>
             <a href="">Download App</a>
@@ -142,7 +151,7 @@
                     alt="cartbag">
         </div>
         <hr>
-        
+       </div>
     </div>
 </body>
 
