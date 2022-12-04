@@ -7,7 +7,7 @@ let mens=[
     Sleeve: "Full Sleeve",
     Color: "Black",
         category: "T-shirt",
-        strikedoffprice:"₹1499"
+        strikedoffprice:"1499"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/men-s-purple-wakanda-forever-war-cry-graphic-printed-t-shirt-555485-1669015282-1.jpg",
@@ -17,7 +17,7 @@ let mens=[
       Color: "Purpul",
       Sleeve:"Half Sleeve",
         category: "T-shirt",
-        strikedoffprice: "₹999"
+        strikedoffprice: "999"
     },
     {
         img_url:"https://images.bewakoof.com/t1080/men-s-white-airborne-fleet-plus-size-round-neck-t-shirt-555554-1669103229-1.jpg",
@@ -27,7 +27,7 @@ let mens=[
       Color: "White",
       Sleeve:"Half Sleeve",
        category: "T-shirt",
-        strikedoffprice:"₹1049"
+        strikedoffprice:"1049"
     },
      {
         img_url: "https://images.bewakoof.com/t1080/men-s-black-rare-af-plus-size-551763-1668139500-1.jpg",
@@ -37,7 +37,7 @@ let mens=[
        Color: "Black",
        Sleeve:"Half Sleeve",
         category: "T-shirt",
-        strikedoffprice: "₹949"
+        strikedoffprice: "949"
     },
      {
         img_url: "https://images.bewakoof.com/t1080/red-checks-two-pocket-casual-full-sleeve-shirt-376591-1655817418-1.jpg",
@@ -47,7 +47,7 @@ let mens=[
        Color: "Multi color",
        Sleeve:"Full Sleeve",
         category: "Shirt",
-        strikedoffprice: "₹1599"
+        strikedoffprice: "1599"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/men-s-mandarin-collar-full-sleeves-shirt-361291-1656151875-1.jpg",
@@ -57,7 +57,7 @@ let mens=[
         Color: "Purpul",
         Sleeve:"Full Sleeve",
         category: "Shirt",
-        strikedoffprice: "₹999"
+        strikedoffprice: "999"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/men-s-cream-beach-hawaiian-floral-printed-shirt-554392-1668498540-1.jpg",
@@ -67,7 +67,7 @@ let mens=[
         Color: "White",
         Sleeve:"Half Sleeve",
         category: "Shirt",
-        strikedoffprice: "₹1119"
+        strikedoffprice: "1119"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/no-mad-layered-sweatshirt-hoodie-368596-1656189156-1.jpg",
@@ -77,7 +77,7 @@ let mens=[
         Color: "Gray",
         Sleeve:"Full Sleeve",
         category: "Sweatshirt",
-        strikedoffprice: "₹2799"
+        strikedoffprice: "2799"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/gravity-deep-teal-hoodie-sweatshirt-364990-1656196919-1.jpg",
@@ -87,7 +87,7 @@ let mens=[
         Color: "Green",
         Sleeve:"Full Sleeve",
         category: "Hoodies",
-        strikedoffprice: "₹2499"
+        strikedoffprice: "2499"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/men-s-black-iron-man-training-t-shirt-455067-1656148974-1.jpg",
@@ -97,7 +97,7 @@ let mens=[
         Color: "Black",
         Sleeve:"Half Sleeve",
         category: "T-shirt",
-        strikedoffprice: "₹1599"
+        strikedoffprice: "1599"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/orchid-petalmen-aop-t-shirt-464962-1656045526-1.jpg",
@@ -107,7 +107,7 @@ let mens=[
         Color: "Purpul",
         Sleeve:"Half Sleeve",
         category: "T-shirt",
-        strikedoffprice: "₹1599"
+        strikedoffprice: "1599"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/men-s-black-no-jutsu-graphic-printed-oversized-hoodie-555411-1668754642-1.jpg",
@@ -117,7 +117,7 @@ let mens=[
         Color: "Black",
         Sleeve:"Full Sleeve",
         category: "Hoodies",
-        strikedoffprice: "₹3999"
+        strikedoffprice: "3999"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/men-s-black-solid-windcheater-aw-22-491987-1663667728-1.jpg",
@@ -127,7 +127,7 @@ let mens=[
         Color: "Black",
         Sleeve:"Full Sleeve",
         category: "Jacket",
-        strikedoffprice: "₹1000"
+        strikedoffprice: "1000"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/arriving-from-space-layered-hoodie-sweatshirt-369814-1656184963-1.jpg",
@@ -137,7 +137,7 @@ let mens=[
         Color: "Purpul",
         Sleeve:"Third Quarter Sleeve",
          category: "Hoodies",
-        strikedoffprice: "₹1405"
+        strikedoffprice: "1405"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/grey-melange-pocket-print-hoodie-sweatshirt-365002-1656171984-1.jpg",
@@ -147,7 +147,7 @@ let mens=[
         Sleeve: "Full Sleeve",
         Color: "Gray",
         category: "Sweatshirt",
-        strikedoffprice: "₹1299"
+        strikedoffprice: "1299"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/men-s-black-solid-pu-jacket-jackets-498947-1663254483-1.jpg",
@@ -157,7 +157,7 @@ let mens=[
         Sleeve: "Full Sleeve",
         Color: "Black",
         category: "Jacket",
-        strikedoffprice: "₹1599"
+        strikedoffprice: "1599"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/black-colorblock-windcheater-jacket-367108-1656169022-1.jpg",
@@ -167,7 +167,7 @@ let mens=[
         Sleeve: "Full Sleeve",
         Color: "Multicolor",
         category: "Jacket",
-        strikedoffprice: "₹1499"
+        strikedoffprice: "1499"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/zero-gravity-windcheater-jacket-364948-1656164876-1.jpg",
@@ -177,7 +177,7 @@ let mens=[
         Color: "White",
         Sleeve:"Full Sleeve",
         category: "Jacket",
-        strikedoffprice: "₹1099"
+        strikedoffprice: "1099"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/men-s-solid-red-hoodie-364989-1656196912-1.jpg",
@@ -187,7 +187,7 @@ let mens=[
         Color: "Red",
         Sleeve:"Full Sleeve",
         category: "Hoodies",
-        strikedoffprice: "₹1599"
+        strikedoffprice: "1599"
     },
       {
         img_url: "https://images.bewakoof.com/t640/men-s-barely-pink-solid-oversize-fit-hoodie-499062-1668603686-1.jpg",
@@ -197,7 +197,7 @@ let mens=[
         Color: "Pink",
         Sleeve:"Full Sleeve",
          category: "Hoodies",
-        strikedoffprice: "₹2199"
+        strikedoffprice: "2199"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/men-s-plus-size-brown-solid-pu-jacket-jacket-498973-1664287113-1.jpg",
@@ -207,7 +207,7 @@ let mens=[
         Sleeve: "Full Sleeve",
         Color: "Brown",
         category: "Jacket",
-        strikedoffprice: "₹1799"
+        strikedoffprice: "1799"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/maroon-banner-color-block-zipper-sweatshirt-hoodie-364896-1656196855-1.jpg",
@@ -217,7 +217,7 @@ let mens=[
         Color: "Red",
         Sleeve:"Full Sleeve",
          category: "Hoodie",
-        strikedoffprice: "₹1399"
+        strikedoffprice: "1399"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/men-s-savvy-red-solid-polo-t-shirt-492867-1664286835-1.jpg",
@@ -227,7 +227,7 @@ let mens=[
         Color: "Red",
         Sleeve:"Half Sleeve",
          category: "T-shirt",
-        strikedoffprice: "₹1699"
+        strikedoffprice: "1699"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/just-explore-half-sleeve-t-shirt-sun-active-251023-1655813574-1.jpg",
@@ -237,7 +237,7 @@ let mens=[
         Color: "White",
         Sleeve:"Half Sleeve",
         category: "T-shirt",
-        strikedoffprice: "₹999"
+        strikedoffprice: "999"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/men-s-blue-metaverse-graphic-printed-oversized-t-shirt-519198-1667510236-1.jpg",
@@ -247,7 +247,7 @@ let mens=[
         Color: "Gray",
         Sleeve:"Half Sleeve",
         category: "T-shirt",
-        strikedoffprice: "₹1199"
+        strikedoffprice: "1199"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/men-s-black-yellow-flash-naruto-graphic-printed-oversized-t-shirt-556471-1669279496-1.jpg",
@@ -257,7 +257,7 @@ let mens=[
         Color: "Black",
         Sleeve:"Half Sleeve",
         category: "T-shirt",
-        strikedoffprice: "₹1699"
+        strikedoffprice: "1699"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/men-s-slate-rose-oversized-t-shirt-500384-1667505471-1.jpg",
@@ -267,7 +267,7 @@ let mens=[
         Color: "Pink",
         Sleeve:"Half Sleeve",
          category: "T-shirt",
-        strikedoffprice: "₹3599"
+        strikedoffprice: "3599"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/men-s-verdant-green-toxic-typography-oversized-hoodie-t-shirt-540917-1667564036-1.jpg",
@@ -277,7 +277,7 @@ let mens=[
         Color: "Green",
         Sleeve:"Half Sleeve",
          category: "Hoodies",
-        strikedoffprice: "₹1599"
+        strikedoffprice: "1599"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/men-s-blue-marvel-moon-knight-graphic-printed-oversized-t-shirt-537232-1667562898-1.jpg",
@@ -287,7 +287,7 @@ let mens=[
         Color: "Blue",
         Sleeve:"Half Sleeve",
          category: "T-shirt",
-        strikedoffprice: "₹2599"
+        strikedoffprice: "2599"
     },
       {
         img_url: "https://images.bewakoof.com/t1080/men-s-black-setsuritsu-kyojin-graphic-printed-oversized-t-shirt-555490-1669025888-1.jpg",
@@ -297,7 +297,7 @@ let mens=[
         Color: "Black",
         Sleeve:"Half Sleeve",
          category: "T-shirt",
-        strikedoffprice: "₹1899"
+        strikedoffprice: "1899"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/men-s-blue-washed-bootcut-jeans-555389-1668688570-1.jpg",
@@ -306,7 +306,7 @@ let mens=[
       size: "XL",
         Color: "Blue",
          category: "Jeans",
-        strikedoffprice: "₹5899"
+        strikedoffprice: "5899"
     },
   {
     img_url: "https://images.bewakoof.com/t1080/men-s-blue-washed-skinny-fit-jeans-555388-1668688638-1.jpg",
@@ -315,7 +315,7 @@ let mens=[
     size: "XL",
     Color: "Blue",
     category: "Jeans",
-    strikedoffprice: "₹3899"
+    strikedoffprice: "3899"
   },
 ]
 let wishlistcount = 0;
@@ -331,7 +331,7 @@ function display(arr) {
       image.addEventListener("click", clickit);
         function clickit(){
           localStorage.setItem("addtocart",JSON.stringify(elem))
-         window.location.href="http://127.0.0.1:5500/addtocartpage/cart.html"
+         window.location.href="../addtocartpage/cart.html"
         }
       let div2=document.createElement("div")
         let bk=document.createElement("h5")
@@ -345,7 +345,7 @@ function display(arr) {
         let price = document.createElement("h5")
         price.textContent = "₹"+elem.price
         let mrp = document.createElement("h6")
-        mrp.textContent = elem.strikedoffprice
+        mrp.textContent = "₹"+elem.strikedoffprice
         pricebox.append(price, mrp)
          div.append(image,div2,name, pricebox)
          document.getElementById("product").append(div)
@@ -463,4 +463,12 @@ function sortitT(){
   }
   display(mens)
 }
+
+$(function(){
+ $("#top").load("/Navbar/Navbar.html"); 
+});
+$(function(){
+ $("#foot").load("/footer_page/footer.html"); 
+});
+
 

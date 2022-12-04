@@ -7,7 +7,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "Black",
         category: "T-shirt",
-        strikedoffprice: "₹1299"
+        strikedoffprice: "1299"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/women-s-pink-my-drug-graphic-printed-oversized-t-shirt-556611-1669374787-1.jpg",
@@ -17,7 +17,7 @@ let womens = [
         Sleeve: "Third Quarter",
         Color: "Pink",
         category: "T-shirt",
-        strikedoffprice: "₹666"
+        strikedoffprice: "666"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/women-s-yellow-my-drug-graphic-printed-boyfriend-t-shirt-556603-1669374992-1.jpg",
@@ -27,7 +27,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "Yellow",
         category: "T-shirt",
-        strikedoffprice: "₹1299"
+        strikedoffprice: "1299"
     },
     {
         img_url: "https://images.bewakoof.com/t640/women-s-very-peri-sleeve-slit-oversized-t-shirt-521212-1667495022-1.jpg",
@@ -37,7 +37,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "Purpul",
         category: "T-shirt",
-        strikedoffprice: "₹999"
+        strikedoffprice: "999"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/women-s-white-all-over-printed-short-top-467396-1655979599-1.jpg",
@@ -47,7 +47,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "while",
         category: "T-shirt",
-        strikedoffprice: "₹1399"
+        strikedoffprice: "1399"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/women-s-black-anti-hero-graphic-printed-oversized-hoodie-556739-1669375150-1.jpg",
@@ -57,7 +57,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "Black",
         category: "Hoodies",
-        strikedoffprice: "₹1299"
+        strikedoffprice: "1299"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/dusty-pink-plus-size-drop-shoulder-hoodie-377922-1656158254-1.jpg",
@@ -67,7 +67,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "Pink",
         category: "Hoodies",
-        strikedoffprice: "₹1299"
+        strikedoffprice: "1299"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/pastel-lilac-fashion-sweatshirt-hoodie-dress-366300-1656184832-1.jpg",
@@ -77,7 +77,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "Purpul",
         category: "Hoodies",
-        strikedoffprice: "₹1299"
+        strikedoffprice: "1299"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/women-deep-teal-solid-oversized-hoodie-501230-1663660442-1.jpg",
@@ -87,7 +87,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "Green",
         category: "Hoodies",
-        strikedoffprice: "₹3299"
+        strikedoffprice: "3299"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/women-s-solid-flare-sleeve-hoodie-362062-1655933017-1.jpg",
@@ -97,7 +97,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "Red",
         category: "Hoodies",
-        strikedoffprice: "₹1299"
+        strikedoffprice: "1299"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/joey-doesn-t-share-food-oversized-sweatshirt-554155-1668148766-1.jpg",
@@ -107,7 +107,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "Black",
         category: "Sweatshirt",
-        strikedoffprice: "₹2299"
+        strikedoffprice: "2299"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/women-s-harbor-gray-balanced-diet-graphic-printed-oversized-sweatshirt-548482-1668598317-1.jpg",
@@ -117,7 +117,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "Blue",
         category: "Sweatshirt",
-        strikedoffprice: "₹2999"
+        strikedoffprice: "2999"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/women-s-grey-plus-size-relaxed-fit-sweatshirt-378035-1656175521-1.jpg",
@@ -127,7 +127,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "Gray",
         category: "Sweatshirt",
-        strikedoffprice: "₹1299"
+        strikedoffprice: "1299"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/white-plus-size-solid-sweatshirt-362773-1656175390-1.jpg",
@@ -137,7 +137,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "White",
         category: "T-shirt",
-        strikedoffprice: "₹999"
+        strikedoffprice: "999"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/kotty-women-s-blue-mid-rise-jeans-449637-1656159062-1.jpg",
@@ -146,7 +146,7 @@ let womens = [
         size: "L",
         Color: "Blue",
         category: "Jeans",
-        strikedoffprice: "₹1599"
+        strikedoffprice: "1599"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/women-s-black-straight-fit-jeans-556365-1669122951-1.jpg",
@@ -155,7 +155,7 @@ let womens = [
         size: "XL",
         Color: "Black",
         category: "Jeans",
-        strikedoffprice: "₹1599"
+        strikedoffprice: "1599"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/women-s-blue-washed-skinny-fit-jeans-555179-1668673949-1.jpg",
@@ -164,7 +164,7 @@ let womens = [
         size: "XL",
         Color: "Blue",
         category: "T-shirt",
-        strikedoffprice: "₹1599"
+        strikedoffprice: "1599"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/olive-half-sleeves-women-s-shirt-367149-1656163847-1.jpg",
@@ -174,7 +174,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "Gray",
         category: "Shirt",
-        strikedoffprice: "₹1299"
+        strikedoffprice: "1299"
     },
     {
         img_url: "https://images.bewakoof.com/t540/style-quotient-women-white-smart-solid-formal-shirt-style-quotient-women-s-shirt-with-mandarin-collar-335212-1614319693.jpg",
@@ -184,7 +184,7 @@ let womens = [
         Sleeve: "Full Sleeve",
         Color: "White",
         category: "Shirt",
-        strikedoffprice: "₹999"
+        strikedoffprice: "999"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/women-s-blue-shirt-540967-1662558250-1.jpg",
@@ -194,7 +194,7 @@ let womens = [
         Sleeve: "Full Sleeve",
         Color: "",
         category: "Shirt",
-        strikedoffprice: "₹1199"
+        strikedoffprice: "1199"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/marsala-varsity-bomber-jacket-276609-1656179348-1.jpg",
@@ -204,7 +204,7 @@ let womens = [
         Sleeve: "Full Sleeve",
         Color: "Red",
         category: "Jacket",
-        strikedoffprice: "₹1999"
+        strikedoffprice: "1999"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/women-s-olive-solid-puffer-sleeveless-jackets-498994-1666332731-1.jpg",
@@ -214,7 +214,7 @@ let womens = [
         Sleeve: "Sleeveless",
         Color: "Green",
         category: "JacketJacket",
-        strikedoffprice: "₹2999"
+        strikedoffprice: "2999"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/women-s-black-solid-puffer-jackets-498990-1664195973-1.jpg",
@@ -224,7 +224,7 @@ let womens = [
         Sleeve: "Full Sleeve",
         Color: "Black",
         category: "Jacket",
-        strikedoffprice: "₹3999"
+        strikedoffprice: "3999"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/women-s-grey-hooded-puffer-jacket-555249-1668681140-1.jpg",
@@ -234,7 +234,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "Gray",
         category: "Jacket",
-        strikedoffprice: "₹1999"
+        strikedoffprice: "1999"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/women-s-purple-bts-astro-jin-graphic-printed-oversized-t-shirt-556474-1669374216-1.jpg",
@@ -244,7 +244,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "Purpul",
         category: "T-shirt",
-        strikedoffprice: "₹1299"
+        strikedoffprice: "1299"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/women-s-black-choose-happiness-t-shirt-300981-1655814136-1.jpg",
@@ -254,7 +254,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "Black",
         category: "T-shirt",
-        strikedoffprice: "₹399"
+        strikedoffprice: "399"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/women-s-green-too-alien-for-earth-graphic-printed-oversized-t-shirt-556740-1669375372-1.jpg",
@@ -264,7 +264,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "Green",
         category: "T-shirt",
-        strikedoffprice: "₹1299"
+        strikedoffprice: "1299"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/nope-lazy-half-sleeve-printed-t-shirt-white-297886-1655749051-1.jpg",
@@ -274,7 +274,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "White",
         category: "T-shirt",
-        strikedoffprice: "₹499"
+        strikedoffprice: "499"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/women-s-red-busy-doing-nothing-t-shirt-277535-1655747941-1.jpg",
@@ -284,7 +284,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "Red",
         category: "T-shirt",
-        strikedoffprice: "₹599"
+        strikedoffprice: "599"
     },
     {
         img_url: "https://images.bewakoof.com/t1080/fly-high-boyfriend-t-shirt-511264-1655709344-1.jpg",
@@ -294,7 +294,7 @@ let womens = [
         Sleeve: "Half Sleeve",
         Color: "Red",
         category: "T-shirt",
-        strikedoffprice: "₹999"
+        strikedoffprice: "999"
     },
 ];
 let wishlistcount = 0;
@@ -310,7 +310,7 @@ function display(arr) {
        image.addEventListener("click", clickit);
         function clickit(){
           localStorage.setItem("addtocart",JSON.stringify(elem))
-         window.location.href="http://127.0.0.1:5500/addtocartpage/cart.html"
+         window.location.href="../addtocartpage/cart.html"
         }
       let bk = document.createElement("h5")
       let div2=document.createElement("div")
@@ -324,7 +324,7 @@ function display(arr) {
         let price = document.createElement("h5")
         price.textContent = "₹"+elem.price
         let mrp = document.createElement("h6")
-        mrp.textContent = elem.strikedoffprice
+        mrp.textContent = "₹"+elem.strikedoffprice
         pricebox.append(price, mrp)
          div.append(image,div2, name, pricebox)
          document.getElementById("product").append(div)
@@ -441,3 +441,10 @@ function sortitT(){
   }
   display(womens)
 }
+$(function(){
+ $("#top").load("/Navbar/Navbar.html"); 
+});
+$(function(){
+ $("#foot").load("/footer_page/footer.html"); 
+});
+
