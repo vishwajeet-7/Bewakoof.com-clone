@@ -1,0 +1,60 @@
+#parent{
+    display: flex;
+}
+#logo>img{
+  width: 50%;
+  margin-left: 150px;
+}
+#mail>p{
+    font-family: montserrat,
+        sans-serif;;
+        font-weight: 400;
+        font-size: 14px;
+        padding-left: 700px;
+}
+#mail{
+    margin-top: -10px;
+    line-height: 5px;
+    margin-bottom: -5px;
+}
+#mail>:first-child{
+    font-size:x-small;
+    color: grey;  
+}
+#namepay{
+    display: flex;
+}
+#namepay>h3{
+font-family: montserrat-bold,
+    sans-serif;
+    line-height: 24px;
+    font-size: 19px;
+   
+    padding-left: 150px;
+}
+#form{
+    display: flex;
+}
+#btn{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin-left: 150px;
+}
+#btn>button{
+    border-right: none;
+    border-color: rgb(214, 214, 214);
+    width: 350px;
+    height: 70px;
+    font-size: medium;
+}
+#btn>button>img{
+ width: 9%;
+ padding-right: 500px;
+padding-top: 10px;
+}
+#btn>button>p{
+  margin-top: -20px;
+}
+
+
+
