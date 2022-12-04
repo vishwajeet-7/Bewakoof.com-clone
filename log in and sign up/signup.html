@@ -350,6 +350,32 @@
             height: 60px;
             font-size: 20px;
         }
+        @media all and (max-width: 768px){
+            #parent{
+                background-color: yellow;
+                border: 0.5px solid grey;
+            }
+            #topbar{
+                display: none;
+            }
+            #navbar input{
+                display: none;
+            }
+            #wishlist{
+                display: none;
+            }
+            #navbar{
+                padding-left: 0px;
+            }
+            #navh{
+                margin-left: 20px;
+                font-weight: bold;
+            }
+            #login{
+                color: rgb(10 152 6);
+                font-weight: bold;
+            }
+        }
         /* button[disabled]{
             cursor: default;
         }
@@ -435,7 +461,7 @@
                                     <h1 class="signup-text">Sign Up</h1>
                                 </div>
                                 <p class="signup-msg">Hi new buddy, let's get you started with the bewakoofi!</p>
-                                <form action="index.html" class="signup-form" name="form">
+                                <form action="../men_page/index.html" class="signup-form" name="form">
                                     <div class="form-group">
                                         <input type="text", maxlength="71" placeholder="Name" value="" name="name" class="name-field">
                                         <span class="bar"></span>

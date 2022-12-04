@@ -303,6 +303,7 @@
                     countItems++;
                     totalAmount += +element.price;
                     totalMrp += +element.strikedoffprice;
+                    localStorage.setItem("totalAmount",totalAmount);
 
                     let headspan = document.createElement("span");
                     headspan.setAttribute("class","qty");
@@ -642,6 +643,11 @@
                 let continueButton = document.createElement("button");
                 continueButton.setAttribute("id","paynow-btn");
                 continueButton.textContent = "CONTINUE";
+                continueButton.addEventListener("click",paymentFunction);
+
+                function paymentFunction(){
+                    window.location.href = "../Payment/payment.html";
+                }
 
                 let payWrap = document.createElement("div");
                 payWrap.setAttribute("class","paynow-wrap")
