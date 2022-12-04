@@ -10,6 +10,29 @@ body{
     line-height: 1;
     box-sizing: border-box;
 }
+#parent{
+   display: flex;
+}
+#logo>img{
+ width: 50%;
+ margin-left: 150px;
+}
+#mail>p{
+   font-family: montserrat,
+       sans-serif;;
+       font-weight: 400;
+       font-size: 14px;
+       padding-left: 700px;
+}
+#mail{
+   margin-top: -10px;
+   line-height: 5px;
+   margin-bottom: -5px;
+}
+#mail>:first-child{
+   font-size:x-small;
+   color: grey;  
+}
 .checkoutHeader{
     top: 0;
     z-index: 1041;

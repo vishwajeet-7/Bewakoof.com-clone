@@ -6,7 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="login.css">
     <style>
+        #topbar {
+    display: flex;
+    padding-left: 80px;
+    margin-top: -6px;
+    font-size: smaller;
+    background-color: rgb(238, 238, 238);
+    height: 24px;
+    align-items: center;
+}
+
+#topbar>a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: rgb(81, 74, 81);
+    font-style: montserrat, sans-serif;
+    size: 10px;
+    font-weight: 500;
+    line-height: 10px;
+    font-style: normal;
+    font-size: smaller
+}
+
+#topbar :nth-last-child(2) {
+    margin-left: 700px;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding-left: 100px;
+    margin-top: 6px;
+}
+
+#navh>a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.9);
+    ;
+}
+
+#navh {
+    text-decoration: none;
+    font-size: small;
+    font-family: montserrat, sans-serif;
+    size: 13px;
+    color: rgba(0, 0, 0, 0.9);
+    margin-left: 50px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#logo {
+    height: 25px;
+    width: 50%;
+    align-items: center;
+}
+
+#wishlist {
+    width: 30px;
+    padding: 18px;
+}
+
+#navbar :nth-child(6) {
+    padding-left: 20px;
+
+}
+
+#navbar>:nth-last-child(5) {
+    margin-left: 200px;
+}
+
+#navbar>p {
+    padding-left: 5px;
+    padding-right: 13px;
+    font-size: 23px;
+}
+
+#navinp {
+    height: 40px;
+    width: 250px;
+    border-radius: 5px;
+    background-color: rgb(234, 234, 234);
+    border: none;
+    align-items: center;
+
+}
+
+#login {
+    text-decoration: none;
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 50px;
+    size: 14px;
+    color: rgb(142, 142, 142);
+}
+#parent>:last-child{
+    margin-top: 8px;
+}
+
+
+#slas{
+margin-left: -200px;
+}
         header{
             width: 100%;
             background: #fff;
@@ -235,14 +340,89 @@
         a{
             text-decoration: none;
         }
-       
+       @media all and (max-width: 768px){
+         #parent{
+            background-color: yellow;
+            width: 118%;
+            border: 0.5px solid #08b042;
+         }
+         #topbar{
+            display: none;
+         }
+         #navbar input{
+            display: none;
+         }
+         #wishlist{
+            display: none;
+         }
+         #navbar + hr{
+            display: none;
+         }
+         #navbar{
+            height: 30px;
+            padding-left: 0px;
+            margin-top: 10px;
+         }
+         #logo{
+            height: 20px;
+            margin-top: -16px;
+            width: 30%;
+         }
+         #navh > a{
+            color: black;
+            font-size: 12px;
+         }
+         #navh{
+            margin-left: 12px;
+            font-weight: 400;
+         }
+         .title h2{
+            letter-spacing: -0.41px;
+            font-size: 21px;
+         }
+         #welcome{
+            width: 50%;
+            justify-content: space-evenly;
+         }
+         .welcome-img img{
+            width: 379px;
+         }
+         
+    }
        
     </style>
 </head>
 <body>
-    <header>
-        <div></div>
-    </header>
+    
+    <div id="parent">
+            <div id="topbar">
+                <a href="">Offers</a>
+                <a href="">Fanbook</a>
+                <a href="">Download App</a>
+                <a href="">TriBe Membership</a>
+                <a href="">Contact Us</a>
+                <a href="">Track Order</a>
+            </div>
+            <div id="navbar">
+                <img id="logo" src="https://images.bewakoof.com/web/ic-desktop-normal-bwkf-logo.svg"
+                        alt="bewokoof">
+                <h3 id="navh"><a href="http://127.0.0.1:5500/Mens/mens.html">MEN</a></h3>
+                <h3 id="navh"><a href="http://127.0.0.1:5500/womens/womens.html">WOMEN</a></h3>
+                <h3 id="navh"><a href="http://127.0.0.1:5500/Mobile%20cover/cover.html">MOBILECOVER</a></h3>
+                <input type="text" name="" id="navinp" placeholder="Search by product category or collection">
+                <p>|</p>
+                <a id="login" href="">Login</a>
+                <img onclick="gotowishlist()" id="wishlist"
+                        src="data:image/png;base64,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"
+                        alt="wishlist icon">
+                <img  id="wishlist"
+                        src="data:image/png;base64,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"
+                        alt="cartbag">
+            </div>
+            <hr>
+            
+    </div>
+    
     <div id="container"> 
         <div id="welcome">
             <div class="title">

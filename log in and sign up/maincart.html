@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="cart.css">
 </head>
 <body>
+    <div id="parent">
+        <div id="logo">
+            <img src="https://images.bewakoof.com/web/ic-desktop-normal-bwkf-logo.svg" alt="">
+        </div>
+        <div id="mail">
+            <p>Signed as</p>
+            <p>happysoumya3@gmail.com</p>
+        </div>
+    </div>
     <div id="app">
         <div class="container-product-item">
             <div class="left-section-wrap">
@@ -40,9 +49,9 @@
             let margin = document.createElement("div");
             margin.setAttribute("class","margin-mobile");
 
-            let checkout = document.createElement("div");
-            checkout.setAttribute("class","checkoutHeader");
-            checkout.setAttribute("class","hidden-xs");
+            // let checkout = document.createElement("div");
+            // checkout.setAttribute("class","checkoutHeader");
+            // checkout.setAttribute("class","hidden-xs");
 
             let container = document.createElement("div");
             container.setAttribute("class","container");
@@ -277,8 +286,8 @@
             container3.append(anchor);
             container.append(listing2,listing);
             footdiv.append(footImage);
-            checkout.append(container3);
-            margin.append(checkout,container,container2,footdiv);
+            // checkout.append(container3);
+            margin.append(container,container2,footdiv);
             second.append(margin);
             first.append(second);
             document.querySelector("#app").append(first);
@@ -341,28 +350,31 @@
 
                     let selectSize = document.createElement("select");
                     selectSize.setAttribute("class","size-select");
-                    selectSize.setAttribute("value","S");
 
                     let sizeOptions1 = document.createElement("option");
                     sizeOptions1.setAttribute("value",element.size);
                     sizeOptions1.textContent = element.size;
 
                     let sizeOptions2 = document.createElement("option");
-                    sizeOptions2.setAttribute("value","M");
-                    sizeOptions2.textContent = "M";
+                    sizeOptions2.setAttribute("value","S");
+                    sizeOptions2.textContent = "S";
 
                     let sizeOptions3 = document.createElement("option");
-                    sizeOptions3.setAttribute("value","L");
-                    sizeOptions3.textContent = "L";
+                    sizeOptions3.setAttribute("value","M");
+                    sizeOptions3.textContent = "M";
 
                     let sizeOptions4 = document.createElement("option");
-                    sizeOptions4.setAttribute("value","XL");
-                    sizeOptions4.textContent = "XL";
+                    sizeOptions4.setAttribute("value","L");
+                    sizeOptions4.textContent = "L";
+
+                    let sizeOptions5 = document.createElement("option");
+                    sizeOptions5.setAttribute("value","XL");
+                    sizeOptions5.textContent = "XL";
 
                     let sizeText = document.createElement("span");
                     sizeText.textContent = "Size:";
 
-                    selectSize.append(sizeOptions1,sizeOptions2,sizeOptions3,sizeOptions4);
+                    selectSize.append(sizeOptions1,sizeOptions2,sizeOptions3,sizeOptions4,sizeOptions5);
                     size.append(sizeText,selectSize);
                     sizeInner.append(size);
 
@@ -374,7 +386,8 @@
 
                     let selectQty = document.createElement("select");
                     selectQty.setAttribute("class","quanity-select");
-                    selectQty.setAttribute("value","");
+                    selectQty.setAttribute("onchange","qtyFunction()");
+                    
 
                     let qtyOptions1 = document.createElement("option");
                     qtyOptions1.setAttribute("value","1");
@@ -403,7 +416,6 @@
                     quantityInner.append(quantity);
 
                     cartModWrap.append(sizeInner,quantityInner);
-
 
                     let sizePromo = document.createElement("div");
                     sizePromo.setAttribute("class","productPromoMsg");
@@ -674,15 +686,22 @@
         window.location.reload();
     }
 
-    function moveToWishlist(element,index){
-        countItems--;
-        totalAmount -= element.price;
-        totalMrp -= element.strikedoffprice;
-        console.log(event.target.parentNode.parentNode);
-        let updated = productDetails.splice(index,1);
-        localStorage.setItem("Bagarray",JSON.stringify(productDetails));
-        localStorage.setItem("wishlist",JSON.stringify(wishlist));
-        window.location.reload();
+    // function moveToWishlist(element,index){
+    //     countItems--;
+    //     totalAmount -= element.price;
+    //     totalMrp -= element.strikedoffprice;
+    //     event.target.parentNode.parentNode.remove();
+    //     let wishlist = productDetails.splice(index,1);
+    //     localStorage.setItem("Bagarray",JSON.stringify(productDetails));
+    //     localStorage.setItem("wishlist",JSON.stringify(wishlist));
+    //     window.location.reload();
+    // }
+
+    function qtyFunction(){
+        let val = document.querySelector(".quantity-select");
+        let sum = val.value;
+        console.log(sum);
+        
     }
 
 
