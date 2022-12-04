@@ -340,6 +340,16 @@
         a{
             text-decoration: none;
         }
+        #parent{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+      } 
+      #container{
+        margin-top: 100px;
+        margin-bottom: -150px;
+      }
        @media all and (max-width: 768px){
          #parent{
             background-color: yellow;
@@ -419,16 +429,30 @@
         }
          
     }
-      #parent{
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background-color: white;
-      } 
-      #container{
-        margin-top: 100px;
-        margin-bottom: -150px;
-      }
+    @media all and (max-width: 400px){
+        #container{
+            display: block;
+        }
+        #navh{
+            display: none;
+        }
+        #login{
+            display: none;
+        }
+        #navinp + p{
+            display: none;
+        }
+        #welcome{
+            width: 100%;
+            justify-content: flex-start;
+            margin-top: -40px;
+        }
+        #form-wrap{
+            margin-top: -281px;
+            background-color: white;
+        }
+    }
+    
     </style>
 </head>
 <body>
@@ -444,13 +468,13 @@
             </div>
             <div id="navbar">
                 <img id="logo" src="https://images.bewakoof.com/web/ic-desktop-normal-bwkf-logo.svg"
-                        alt="bewokoof">
-                <h3 id="navh"><a href="http://127.0.0.1:5500/Mens/mens.html">MEN</a></h3>
-                <h3 id="navh"><a href="http://127.0.0.1:5500/womens/womens.html">WOMEN</a></h3>
-                <h3 id="navh"><a href="http://127.0.0.1:5500/Mobile%20cover/cover.html">MOBILECOVER</a></h3>
+                        alt="bewokoof" onclick="gotoHome()">
+                <h3 id="navh"><a href="../Mens/mens.html">MEN</a></h3>
+                <h3 id="navh"><a href="../womens/womens.html">WOMEN</a></h3>
+                <h3 id="navh"><a href="../ACCESSORIES/acc.html">MOBILECOVER</a></h3>
                 <input type="text" name="" id="navinp" placeholder="Search by product category or collection">
                 <p>|</p>
-                <a id="login" href="">Login</a>
+                <a id="login" href="../log in and sign up/email.html">Login</a>
                 <img onclick="gotowishlist()" id="wishlist"
                         src="data:image/png;base64,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"
                         alt="wishlist icon">
@@ -568,6 +592,14 @@
             localStorage.setItem("mobile",JSON.stringify(userMobile));
         }
     }
-
+    function gotowishlist(){
+        window.location.href = "../wishlist/wishlist.html";
+    }
+    function gotoadd(){
+        window.location.href = "../log in and sign up/maincart.html";
+    }
+    function gotoHome(){
+        window.location.href = "../men_page/index.html";
+    }
 
 </script>
