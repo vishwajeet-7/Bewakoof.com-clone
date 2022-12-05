@@ -253,7 +253,7 @@ gi
   }
 
   #parent2 {
-    border: 2px solid rgb(232, 125, 11);
+    /* border: 2px solid rgb(232, 125, 11); */
     padding: 10px 0px;
     display: flex;
     justify-content: space-evenly;
