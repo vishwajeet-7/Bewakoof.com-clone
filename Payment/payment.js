@@ -369,5 +369,7 @@ function debit() {
     }
 }
 }
-
+function homepage() {
+    window.location.href="../men_page/index.html"
+}
 

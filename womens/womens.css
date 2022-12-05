@@ -108,12 +108,15 @@
      font-size: small;
  }
 
- img:hover {
-     transform: scale(102%);
- }
+
   #product>div>div>img {
       width: 30px;
       height: 30px;
       margin-top: 15px;
       margin-left: 200px;
   }
+   #top {
+       position: fixed;
+       background-color: white;
+       width: 100%;
+   }

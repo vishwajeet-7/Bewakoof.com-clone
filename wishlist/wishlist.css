@@ -4,9 +4,7 @@
      font-family: montserrat-bold, sans-serif;
  }
 
- img:hover {
-     transform: scale(102%);
- }
+
 
  #product>div>img {
      width: 95%;
@@ -41,4 +39,9 @@
      font-family: Georgia, 'Times New Roman', Times, serif;
      margin-bottom: 10px;
  }
+  #top {
+      position: fixed;
+      background-color: white;
+      width: 100%;
+  }
  
