@@ -93,7 +93,9 @@
       color: rgb(148, 148, 148);
       font-size: small;
   }
-
+ img:hover{
+   transform: scale(102%);
+ }
  #product>div>div>img{
     width: 30px;
     height: 30px;

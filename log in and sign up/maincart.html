@@ -10,7 +10,7 @@
 <body>
     <div id="parent">
         <div id="logo">
-            <img src="https://images.bewakoof.com/web/ic-desktop-normal-bwkf-logo.svg" alt="">
+            <img onclick="gotoHome()" src="https://images.bewakoof.com/web/ic-desktop-normal-bwkf-logo.svg" alt="">
         </div>
         <div id="mail">
             <p>Signed as</p>
@@ -35,6 +35,10 @@
     let countItems = 0;
     let totalAmount = 0;
     let totalMrp = 0;
+
+    function gotoHome(){
+        window.location.href = "../men_page/index.html";
+    }
     
     if(productDetails.length == 0){
         console.log("test");
@@ -117,7 +121,7 @@
             let contin = document.createElement("a");
             contin.setAttribute("class","success");
             contin.setAttribute("hreflang","en-in");
-            contin.setAttribute("href","/");
+            contin.setAttribute("href","../men_page/index.html");
             contin.textContent ="Continue Shopping";
 
             let line = document.createElement("hr");
@@ -159,7 +163,7 @@
             let tdanc11 = document.createElement("a");
             tdanc11.setAttribute("class","blueText");
             tdanc11.setAttribute("hreflang","en-us");
-            tdanc11.setAttribute("href","/top-wear-for-men");
+            tdanc11.setAttribute("href","../men_page/index.html");
             tdanc11.textContent = "Topwear";
             
             tdDiv11.append(tdanc11);
@@ -170,7 +174,7 @@
             let tdanc12 = document.createElement("a");
             tdanc12.setAttribute("class","blueText");
             tdanc12.setAttribute("hreflang","en-us");
-            tdanc12.setAttribute("href","/men-bottom-wear-collection");
+            tdanc12.setAttribute("href","../men_page/index.html");
             tdanc12.textContent = "Bottomwear";
 
             tdDiv12.append(tdanc12);
@@ -181,7 +185,7 @@
             let tdanc13 = document.createElement("a");
             tdanc13.setAttribute("class","blueText");
             tdanc13.setAttribute("hreflang","en-us");
-            tdanc13.setAttribute("href","/footwear");
+            tdanc13.setAttribute("href","../men_page/index.html");
             tdanc13.textContent = "Footwear";
 
             tdDiv13.append(tdanc13);
@@ -192,7 +196,7 @@
             let tdanc14 = document.createElement("a");
             tdanc14.setAttribute("class","blueText");
             tdanc14.setAttribute("hreflang","en-us");
-            tdanc14.setAttribute("href","/bestsellers-for-men");
+            tdanc14.setAttribute("href","../men_page/index.html");
             tdanc14.textContent = "Bestsellers";
 
             tdDiv14.append(tdanc14);
@@ -212,7 +216,7 @@
             let tdanc21 = document.createElement("a");
             tdanc21.setAttribute("class","blueText");
             tdanc21.setAttribute("hreflang","en-us");
-            tdanc21.setAttribute("href","/top-wear-for-men");
+            tdanc21.setAttribute("href","../women_page/women.html");
             tdanc21.textContent = "Topwear";
 
             tdDiv21.append(tdanc21);
@@ -223,7 +227,7 @@
             let tdanc22 = document.createElement("a");
             tdanc22.setAttribute("class","blueText");
             tdanc22.setAttribute("hreflang","en-us");
-            tdanc22.setAttribute("href","/men-bottom-wear-collection");
+            tdanc22.setAttribute("href","../womens/womens.html");
             tdanc22.textContent = "Bottomwear";
 
             tdDiv22.append(tdanc22);
@@ -234,7 +238,7 @@
             let tdanc23 = document.createElement("a");
             tdanc23.setAttribute("class","blueText");
             tdanc23.setAttribute("hreflang","en-us");
-            tdanc23.setAttribute("href","/footwear");
+            tdanc23.setAttribute("href","../womens/womens.html");
             tdanc23.textContent = "Footwear";
 
             tdDiv23.append(tdanc23);
@@ -245,7 +249,7 @@
             let tdanc24 = document.createElement("a");
             tdanc24.setAttribute("class","blueText");
             tdanc24.setAttribute("hreflang","en-us");
-            tdanc24.setAttribute("href","/bestsellers-for-men");
+            tdanc24.setAttribute("href","../womens/womens.html");
             tdanc24.textContent = "Bestsellers";
 
             tdDiv24.append(tdanc24);
@@ -266,7 +270,7 @@
             let tdanc31 = document.createElement("a");
             tdanc31.setAttribute("class","blueText");
             tdanc31.setAttribute("hreflang","en-us");
-            tdanc31.setAttribute("href","/footwear");
+            tdanc31.setAttribute("href","../ACCESSORIES/acc.html");
             tdanc31.textContent = "All Mobile Covers";
 
 
