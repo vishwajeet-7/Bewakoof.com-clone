@@ -3,6 +3,8 @@ document.getElementById("wallet").addEventListener("click", wallet)
 document.getElementById("upi").addEventListener("click", upi)
 document.getElementById("netbanking").addEventListener("click", netbanking)
 document.getElementById("cash").addEventListener("click", cashondel)
+let x = localStorage.getItem("totalAmount")
+document.getElementById("total").textContent=x
 function cashondel() {
     document.getElementById("display").innerHTML = null
      document.getElementById("cash").style.backgroundColor = "white";
@@ -367,3 +369,5 @@ function debit() {
     }
 }
 }
+
+
