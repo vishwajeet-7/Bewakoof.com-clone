@@ -5,6 +5,10 @@ $(function(){
 $(function(){
     $("#top").load("/Navbar/Navbar.html"); 
    });
+
+   function product(){
+    window.location.href = "../Mens/mens.html";
+}
        
     
 
